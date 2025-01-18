@@ -1,0 +1,5 @@
+{
+    "python.defaultInterpreterPath": "/path/to/your/python",
+    // or for workspace specific:
+    "python.pythonPath": "/path/to/your/python"
+} 
