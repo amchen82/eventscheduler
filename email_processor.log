@@ -11564,3 +11564,2654 @@ message: "API key not valid. Please pass a valid API key."
 2025-01-17 21:00:03,670 - __main__ - ERROR - Error processing emails: UNIQUE constraint failed: events.unique_id
 2025-01-17 21:00:03,670 - __main__ - INFO - Logging out from Gmail
 2025-01-17 21:00:03,715 - root - ERROR - Application error: UNIQUE constraint failed: events.unique_id
+2025-01-18 12:13:24,183 - __main__ - INFO - Initializing EmailEventProcessor
+2025-01-18 12:13:24,193 - __main__ - INFO - Successfully initialized Gemini model
+2025-01-18 12:13:24,193 - __main__ - INFO - Starting email processing
+2025-01-18 12:13:24,193 - __main__ - INFO - Connecting to Gmail...
+2025-01-18 12:13:24,525 - __main__ - INFO - Successfully connected to Gmail
+2025-01-18 12:13:24,582 - __main__ - INFO - Searching for emails with subject 'create event'
+2025-01-18 12:13:24,637 - __main__ - INFO - Found 2 matching emails
+2025-01-18 12:13:24,637 - __main__ - INFO - Processing email b'19'
+2025-01-18 12:13:24,943 - __main__ - INFO - Processing multipart email
+2025-01-18 12:13:24,943 - __main__ - INFO - Email body length: 1360 characters
+2025-01-18 12:13:24,943 - __main__ - INFO - Email body: ---------- Forwarded message ---------
+From: VFS Global <donotreply@vfsglobal.com>
+Date: Thu, Jan 9, 2025 at 10:24 PM
+Subject: Appointment Confirmation
+To: <job2006feng@gmail.com>, <JOB2006FENG@gmail.com>
+
+
+VFS Appointment System
+
+Dear Applicant,
+
+Please note that your appointment for Unique Reference Number *
+USA61653801887 * on * 15-01-2025 * at * 9:30 * at 128E 32nd Street, 3rd
+Floor, New York,New York,United States of America,10016.
+
+Please find enclosed your Appointment Letter. Kindly print it and bring it
+with you on your appointment day so you will be allowed to access the
+center. On your appointment day, you must bring the documents required to
+apply for your visa.
+
+In case of any applicable refunds, you will receive an email notification
+once your refund processing has been initiated. Please check the refunds
+policy on our website for more details.
+
+Thank you for your understanding and cooperation.
+
+Kind regards,VFS Global Team
+
+This is an automatically generated email – please do not reply to it. If
+you have any queries or require further assistance, please reach out to our
+customer support team at the numbers mentioned on our website.
+
+Helpline Number : 13472523055
+
+Email: Info.FranceUSA@vfsglobal.com
+
+Website: www.vfsglobal.com/France/USA
+
+
+
+Partnering Governments. Providing Solutions.
+
+2025-01-18 12:13:24,943 - __main__ - INFO - Processing email from: job2006feng@gmail.com
+2025-01-18 12:13:24,943 - __main__ - INFO - Extracting event information from email
+2025-01-18 12:13:24,943 - __main__ - INFO - Sending prompt to Gemini: Extract the following information from the email content and return it as valid JSON:
+        - Event name
+        - Participants (list)
+        - Location
+        - Dates and Time
+        - Repeat frequency (if any)
+        - End date (if any)
+        
+        Return only the JSON object with no additional text.
+        
+        Email content:
+        ---------- Forwarded message ---------
+From: VFS Global <donotreply@vfsglobal.com>
+Date: Thu, Jan 9, 2025 at 10:24 PM
+Subject: Appointment Confirmation
+To: <job2006feng@gmail.com>, <JOB2006FENG@gmail.com>
+
+
+VFS Appointment System
+
+Dear Applicant,
+
+Please note that your appointment for Unique Reference Number *
+USA61653801887 * on * 15-01-2025 * at * 9:30 * at 128E 32nd Street, 3rd
+Floor, New York,New York,United States of America,10016.
+
+Please find enclosed your Appointment Letter. Kindly print it and bring it
+with you on your appointment day so you will be allowed to access the
+center. On your appointment day, you must bring the documents required to
+apply for your visa.
+
+In case of any applicable refunds, you will receive an email notification
+once your refund processing has been initiated. Please check the refunds
+policy on our website for more details.
+
+Thank you for your understanding and cooperation.
+
+Kind regards,VFS Global Team
+
+This is an automatically generated email – please do not reply to it. If
+you have any queries or require further assistance, please reach out to our
+customer support team at the numbers mentioned on our website.
+
+Helpline Number : 13472523055
+
+Email: Info.FranceUSA@vfsglobal.com
+
+Website: www.vfsglobal.com/France/USA
+
+
+
+Partnering Governments. Providing Solutions.
+
+        
+2025-01-18 12:13:25,056 - __main__ - ERROR - Error generating/parsing response: 400 API key not valid. Please pass a valid API key. [reason: "API_KEY_INVALID"
+domain: "googleapis.com"
+metadata {
+  key: "service"
+  value: "generativelanguage.googleapis.com"
+}
+, locale: "en-US"
+message: "API key not valid. Please pass a valid API key."
+]
+2025-01-18 12:13:25,056 - __main__ - INFO - Saving event to database
+2025-01-18 12:13:25,057 - __main__ - INFO - SQL executed: <sqlite3.Cursor object at 0x104ec8d40>
+2025-01-18 12:13:25,058 - __main__ - ERROR - Database error: UNIQUE constraint failed: events.unique_id
+2025-01-18 12:13:25,058 - __main__ - ERROR - Error processing emails: UNIQUE constraint failed: events.unique_id
+2025-01-18 12:13:25,058 - __main__ - INFO - Logging out from Gmail
+2025-01-18 12:13:25,092 - root - ERROR - Application error: UNIQUE constraint failed: events.unique_id
+2025-01-18 12:15:55,991 - __main__ - INFO - Initializing EmailEventProcessor
+2025-01-18 12:15:55,995 - __main__ - INFO - Successfully initialized Gemini model
+2025-01-18 12:15:55,996 - __main__ - INFO - Starting email processing
+2025-01-18 12:15:55,996 - __main__ - INFO - Connecting to Gmail...
+2025-01-18 12:15:56,294 - __main__ - INFO - Successfully connected to Gmail
+2025-01-18 12:15:56,349 - __main__ - INFO - Searching for emails with subject 'create event'
+2025-01-18 12:15:56,400 - __main__ - INFO - Found 2 matching emails
+2025-01-18 12:15:56,400 - __main__ - INFO - Processing email b'19'
+2025-01-18 12:15:56,682 - __main__ - INFO - Processing multipart email
+2025-01-18 12:15:56,682 - __main__ - INFO - Email body length: 1360 characters
+2025-01-18 12:15:56,682 - __main__ - INFO - Email body: ---------- Forwarded message ---------
+From: VFS Global <donotreply@vfsglobal.com>
+Date: Thu, Jan 9, 2025 at 10:24 PM
+Subject: Appointment Confirmation
+To: <job2006feng@gmail.com>, <JOB2006FENG@gmail.com>
+
+
+VFS Appointment System
+
+Dear Applicant,
+
+Please note that your appointment for Unique Reference Number *
+USA61653801887 * on * 15-01-2025 * at * 9:30 * at 128E 32nd Street, 3rd
+Floor, New York,New York,United States of America,10016.
+
+Please find enclosed your Appointment Letter. Kindly print it and bring it
+with you on your appointment day so you will be allowed to access the
+center. On your appointment day, you must bring the documents required to
+apply for your visa.
+
+In case of any applicable refunds, you will receive an email notification
+once your refund processing has been initiated. Please check the refunds
+policy on our website for more details.
+
+Thank you for your understanding and cooperation.
+
+Kind regards,VFS Global Team
+
+This is an automatically generated email – please do not reply to it. If
+you have any queries or require further assistance, please reach out to our
+customer support team at the numbers mentioned on our website.
+
+Helpline Number : 13472523055
+
+Email: Info.FranceUSA@vfsglobal.com
+
+Website: www.vfsglobal.com/France/USA
+
+
+
+Partnering Governments. Providing Solutions.
+
+2025-01-18 12:15:56,682 - __main__ - INFO - Processing email from: job2006feng@gmail.com
+2025-01-18 12:15:56,682 - __main__ - INFO - Extracting event information from email
+2025-01-18 12:15:56,682 - __main__ - INFO - Sending prompt to Gemini: Extract the following information from the email content and return it as valid JSON:
+        - Event name
+        - Participants (list)
+        - Location
+        - Dates and Time
+        - Repeat frequency (if any)
+        - End date (if any)
+        
+        Return only the JSON object with no additional text.
+        
+        Email content:
+        ---------- Forwarded message ---------
+From: VFS Global <donotreply@vfsglobal.com>
+Date: Thu, Jan 9, 2025 at 10:24 PM
+Subject: Appointment Confirmation
+To: <job2006feng@gmail.com>, <JOB2006FENG@gmail.com>
+
+
+VFS Appointment System
+
+Dear Applicant,
+
+Please note that your appointment for Unique Reference Number *
+USA61653801887 * on * 15-01-2025 * at * 9:30 * at 128E 32nd Street, 3rd
+Floor, New York,New York,United States of America,10016.
+
+Please find enclosed your Appointment Letter. Kindly print it and bring it
+with you on your appointment day so you will be allowed to access the
+center. On your appointment day, you must bring the documents required to
+apply for your visa.
+
+In case of any applicable refunds, you will receive an email notification
+once your refund processing has been initiated. Please check the refunds
+policy on our website for more details.
+
+Thank you for your understanding and cooperation.
+
+Kind regards,VFS Global Team
+
+This is an automatically generated email – please do not reply to it. If
+you have any queries or require further assistance, please reach out to our
+customer support team at the numbers mentioned on our website.
+
+Helpline Number : 13472523055
+
+Email: Info.FranceUSA@vfsglobal.com
+
+Website: www.vfsglobal.com/France/USA
+
+
+
+Partnering Governments. Providing Solutions.
+
+        
+2025-01-18 12:15:56,793 - __main__ - ERROR - Error generating/parsing response: 400 API key not valid. Please pass a valid API key. [reason: "API_KEY_INVALID"
+domain: "googleapis.com"
+metadata {
+  key: "service"
+  value: "generativelanguage.googleapis.com"
+}
+, locale: "en-US"
+message: "API key not valid. Please pass a valid API key."
+]
+2025-01-18 12:15:56,793 - __main__ - INFO - Saving event to database
+2025-01-18 12:15:56,796 - __main__ - INFO - SQL executed: <sqlite3.Cursor object at 0x113144d40>
+2025-01-18 12:15:56,796 - __main__ - ERROR - Database error: UNIQUE constraint failed: events.unique_id
+2025-01-18 12:15:56,796 - __main__ - ERROR - Error processing emails: UNIQUE constraint failed: events.unique_id
+2025-01-18 12:15:56,796 - __main__ - INFO - Logging out from Gmail
+2025-01-18 12:15:56,834 - root - ERROR - Application error: UNIQUE constraint failed: events.unique_id
+2025-01-18 23:16:30,776 - __main__ - INFO - Initializing EmailEventProcessor
+2025-01-18 23:16:30,777 - __main__ - INFO - Successfully initialized Gemini model
+2025-01-18 23:16:30,777 - __main__ - INFO - Starting email processing
+2025-01-18 23:16:30,777 - __main__ - INFO - Connecting to Gmail...
+2025-01-18 23:16:31,086 - __main__ - INFO - Successfully connected to Gmail
+2025-01-18 23:16:31,134 - __main__ - INFO - Searching for emails with subject 'create event'
+2025-01-18 23:16:31,191 - __main__ - INFO - Found 2 matching emails
+2025-01-18 23:16:31,191 - __main__ - INFO - Processing email b'19'
+2025-01-18 23:16:31,458 - __main__ - INFO - Processing multipart email
+2025-01-18 23:16:31,458 - __main__ - INFO - Email body length: 1360 characters
+2025-01-18 23:16:31,458 - __main__ - INFO - Email body: ---------- Forwarded message ---------
+From: VFS Global <donotreply@vfsglobal.com>
+Date: Thu, Jan 9, 2025 at 10:24 PM
+Subject: Appointment Confirmation
+To: <job2006feng@gmail.com>, <JOB2006FENG@gmail.com>
+
+
+VFS Appointment System
+
+Dear Applicant,
+
+Please note that your appointment for Unique Reference Number *
+USA61653801887 * on * 15-01-2025 * at * 9:30 * at 128E 32nd Street, 3rd
+Floor, New York,New York,United States of America,10016.
+
+Please find enclosed your Appointment Letter. Kindly print it and bring it
+with you on your appointment day so you will be allowed to access the
+center. On your appointment day, you must bring the documents required to
+apply for your visa.
+
+In case of any applicable refunds, you will receive an email notification
+once your refund processing has been initiated. Please check the refunds
+policy on our website for more details.
+
+Thank you for your understanding and cooperation.
+
+Kind regards,VFS Global Team
+
+This is an automatically generated email – please do not reply to it. If
+you have any queries or require further assistance, please reach out to our
+customer support team at the numbers mentioned on our website.
+
+Helpline Number : 13472523055
+
+Email: Info.FranceUSA@vfsglobal.com
+
+Website: www.vfsglobal.com/France/USA
+
+
+
+Partnering Governments. Providing Solutions.
+
+2025-01-18 23:16:31,458 - __main__ - INFO - Processing email from: job2006feng@gmail.com
+2025-01-18 23:16:31,458 - __main__ - INFO - Extracting event information from email
+2025-01-18 23:16:31,458 - __main__ - INFO - Sending prompt to Gemini: Extract the following information from the email content and return it as valid JSON:
+        - Event name
+        - Participants (list)
+        - Location
+        - Dates and Time
+        - Repeat frequency (if any)
+        - End date (if any)
+        
+        Return only the JSON object with no additional text.
+        
+        Email content:
+        ---------- Forwarded message ---------
+From: VFS Global <donotreply@vfsglobal.com>
+Date: Thu, Jan 9, 2025 at 10:24 PM
+Subject: Appointment Confirmation
+To: <job2006feng@gmail.com>, <JOB2006FENG@gmail.com>
+
+
+VFS Appointment System
+
+Dear Applicant,
+
+Please note that your appointment for Unique Reference Number *
+USA61653801887 * on * 15-01-2025 * at * 9:30 * at 128E 32nd Street, 3rd
+Floor, New York,New York,United States of America,10016.
+
+Please find enclosed your Appointment Letter. Kindly print it and bring it
+with you on your appointment day so you will be allowed to access the
+center. On your appointment day, you must bring the documents required to
+apply for your visa.
+
+In case of any applicable refunds, you will receive an email notification
+once your refund processing has been initiated. Please check the refunds
+policy on our website for more details.
+
+Thank you for your understanding and cooperation.
+
+Kind regards,VFS Global Team
+
+This is an automatically generated email – please do not reply to it. If
+you have any queries or require further assistance, please reach out to our
+customer support team at the numbers mentioned on our website.
+
+Helpline Number : 13472523055
+
+Email: Info.FranceUSA@vfsglobal.com
+
+Website: www.vfsglobal.com/France/USA
+
+
+
+Partnering Governments. Providing Solutions.
+
+        
+2025-01-18 23:16:34,596 - __main__ - INFO - Raw response: response:
+GenerateContentResponse(
+    done=True,
+    iterator=None,
+    result=protos.GenerateContentResponse({
+      "candidates": [
+        {
+          "content": {
+            "parts": [
+              {
+                "text": "```json\n{\n  \"Event name\": \"Visa Appointment\",\n  \"Participants\": [\n    \"job2006feng@gmail.com\",\n    \"JOB2006FENG@gmail.com\"\n  ],\n  \"Location\": \"128E 32nd Street, 3rd Floor, New York, New York, United States of America, 10016\",\n  \"Dates and Time\": \"15-01-2025 at 9:30\",\n  \"Repeat frequency\": null,\n  \"End date\": null\n}\n```"
+              }
+            ],
+            "role": "model"
+          },
+          "finish_reason": "STOP",
+          "avg_logprobs": -0.001935329039891561
+        }
+      ],
+      "usage_metadata": {
+        "prompt_token_count": 491,
+        "candidates_token_count": 135,
+        "total_token_count": 626
+      }
+    }),
+)
+2025-01-18 23:16:34,596 - __main__ - INFO - Extracted JSON string: {
+  "Event name": "Visa Appointment",
+  "Participants": [
+    "job2006feng@gmail.com",
+    "JOB2006FENG@gmail.com"
+  ],
+  "Location": "128E 32nd Street, 3rd Floor, New York, New York, United States of America, 10016",
+  "Dates and Time": "15-01-2025 at 9:30",
+  "Repeat frequency": null,
+  "End date": null
+}
+2025-01-18 23:16:34,597 - __main__ - INFO - Successfully extracted event info: {
+  "Event name": "Visa Appointment",
+  "Participants": [
+    "job2006feng@gmail.com",
+    "JOB2006FENG@gmail.com"
+  ],
+  "Location": "128E 32nd Street, 3rd Floor, New York, New York, United States of America, 10016",
+  "Dates and Time": "15-01-2025 at 9:30",
+  "Repeat frequency": null,
+  "End date": null
+}
+2025-01-18 23:16:34,597 - __main__ - INFO - Saving event to database
+2025-01-18 23:16:34,600 - __main__ - INFO - SQL executed: <sqlite3.Cursor object at 0x103094a40>
+2025-01-18 23:16:34,600 - __main__ - ERROR - Database error: UNIQUE constraint failed: events.unique_id
+2025-01-18 23:16:34,601 - __main__ - ERROR - Error processing emails: UNIQUE constraint failed: events.unique_id
+2025-01-18 23:16:34,601 - __main__ - INFO - Logging out from Gmail
+2025-01-18 23:16:34,637 - root - ERROR - Application error: UNIQUE constraint failed: events.unique_id
+2025-01-18 23:29:46,621 - __main__ - INFO - Initializing EmailEventProcessor
+2025-01-18 23:29:46,621 - __main__ - INFO - Successfully initialized Gemini model
+2025-01-18 23:29:46,621 - __main__ - INFO - Starting email processing
+2025-01-18 23:29:46,621 - __main__ - INFO - Connecting to Gmail...
+2025-01-18 23:29:46,861 - __main__ - INFO - Successfully connected to Gmail
+2025-01-18 23:29:46,911 - __main__ - INFO - Searching for emails with subject 'create event'
+2025-01-18 23:29:46,956 - __main__ - INFO - Found 2 matching emails
+2025-01-18 23:29:46,958 - __main__ - INFO - Processing email b'19'
+2025-01-18 23:29:47,239 - __main__ - INFO - Processing multipart email
+2025-01-18 23:29:47,239 - __main__ - INFO - Email body length: 1360 characters
+2025-01-18 23:29:47,239 - __main__ - INFO - Email body: ---------- Forwarded message ---------
+From: VFS Global <donotreply@vfsglobal.com>
+Date: Thu, Jan 9, 2025 at 10:24 PM
+Subject: Appointment Confirmation
+To: <job2006feng@gmail.com>, <JOB2006FENG@gmail.com>
+
+
+VFS Appointment System
+
+Dear Applicant,
+
+Please note that your appointment for Unique Reference Number *
+USA61653801887 * on * 15-01-2025 * at * 9:30 * at 128E 32nd Street, 3rd
+Floor, New York,New York,United States of America,10016.
+
+Please find enclosed your Appointment Letter. Kindly print it and bring it
+with you on your appointment day so you will be allowed to access the
+center. On your appointment day, you must bring the documents required to
+apply for your visa.
+
+In case of any applicable refunds, you will receive an email notification
+once your refund processing has been initiated. Please check the refunds
+policy on our website for more details.
+
+Thank you for your understanding and cooperation.
+
+Kind regards,VFS Global Team
+
+This is an automatically generated email – please do not reply to it. If
+you have any queries or require further assistance, please reach out to our
+customer support team at the numbers mentioned on our website.
+
+Helpline Number : 13472523055
+
+Email: Info.FranceUSA@vfsglobal.com
+
+Website: www.vfsglobal.com/France/USA
+
+
+
+Partnering Governments. Providing Solutions.
+
+2025-01-18 23:29:47,239 - __main__ - INFO - Processing email from: job2006feng@gmail.com
+2025-01-18 23:29:47,239 - __main__ - INFO - Extracting event information from email
+2025-01-18 23:29:47,239 - __main__ - INFO - Sending prompt to Gemini: Extract the following information from the email content and return it as valid JSON:
+        - Event name
+        - Participants (list)
+        - Location
+        - Dates and Time
+        - Repeat frequency (if any)
+        - End date (if any)
+        
+        Return only the JSON object with no additional text.
+        
+        Email content:
+        ---------- Forwarded message ---------
+From: VFS Global <donotreply@vfsglobal.com>
+Date: Thu, Jan 9, 2025 at 10:24 PM
+Subject: Appointment Confirmation
+To: <job2006feng@gmail.com>, <JOB2006FENG@gmail.com>
+
+
+VFS Appointment System
+
+Dear Applicant,
+
+Please note that your appointment for Unique Reference Number *
+USA61653801887 * on * 15-01-2025 * at * 9:30 * at 128E 32nd Street, 3rd
+Floor, New York,New York,United States of America,10016.
+
+Please find enclosed your Appointment Letter. Kindly print it and bring it
+with you on your appointment day so you will be allowed to access the
+center. On your appointment day, you must bring the documents required to
+apply for your visa.
+
+In case of any applicable refunds, you will receive an email notification
+once your refund processing has been initiated. Please check the refunds
+policy on our website for more details.
+
+Thank you for your understanding and cooperation.
+
+Kind regards,VFS Global Team
+
+This is an automatically generated email – please do not reply to it. If
+you have any queries or require further assistance, please reach out to our
+customer support team at the numbers mentioned on our website.
+
+Helpline Number : 13472523055
+
+Email: Info.FranceUSA@vfsglobal.com
+
+Website: www.vfsglobal.com/France/USA
+
+
+
+Partnering Governments. Providing Solutions.
+
+        
+2025-01-18 23:29:50,458 - __main__ - INFO - Raw response: response:
+GenerateContentResponse(
+    done=True,
+    iterator=None,
+    result=protos.GenerateContentResponse({
+      "candidates": [
+        {
+          "content": {
+            "parts": [
+              {
+                "text": "```json\n{\n  \"Event name\": \"Visa Appointment\",\n  \"Participants\": [\n    \"job2006feng@gmail.com\",\n    \"JOB2006FENG@gmail.com\"\n  ],\n  \"Location\": \"128E 32nd Street, 3rd Floor, New York, New York, United States of America, 10016\",\n  \"Dates and Time\": \"15-01-2025 at 9:30\",\n  \"Repeat frequency\": null,\n  \"End date\": null\n}\n```\n"
+              }
+            ],
+            "role": "model"
+          },
+          "finish_reason": "STOP",
+          "avg_logprobs": -0.006156159236150629
+        }
+      ],
+      "usage_metadata": {
+        "prompt_token_count": 491,
+        "candidates_token_count": 136,
+        "total_token_count": 627
+      }
+    }),
+)
+2025-01-18 23:29:50,459 - __main__ - INFO - Extracted JSON string: {
+  "Event name": "Visa Appointment",
+  "Participants": [
+    "job2006feng@gmail.com",
+    "JOB2006FENG@gmail.com"
+  ],
+  "Location": "128E 32nd Street, 3rd Floor, New York, New York, United States of America, 10016",
+  "Dates and Time": "15-01-2025 at 9:30",
+  "Repeat frequency": null,
+  "End date": null
+}
+2025-01-18 23:29:50,459 - __main__ - INFO - Successfully extracted event info: {
+  "Event name": "Visa Appointment",
+  "Participants": [
+    "job2006feng@gmail.com",
+    "JOB2006FENG@gmail.com"
+  ],
+  "Location": "128E 32nd Street, 3rd Floor, New York, New York, United States of America, 10016",
+  "Dates and Time": "15-01-2025 at 9:30",
+  "Repeat frequency": null,
+  "End date": null
+}
+2025-01-18 23:29:50,459 - __main__ - INFO - Saving event to database
+2025-01-18 23:29:50,463 - __main__ - INFO - Checking for duplicate event: None
+2025-01-18 23:29:50,464 - __main__ - INFO - Duplicate check result: No duplicate found
+2025-01-18 23:29:50,466 - __main__ - INFO - Successfully saved event 64627488-438e-433d-93dc-225232c13bd8 to database
+2025-01-18 23:29:50,466 - __main__ - INFO - Creating calendar invite for event: None
+2025-01-18 23:29:50,466 - __main__ - ERROR - Invalid date format in event_info
+2025-01-18 23:29:50,467 - __main__ - ERROR - Error creating calendar invite: name 'timedelta' is not defined
+2025-01-18 23:29:50,467 - __main__ - ERROR - Failed to send calendar invite: name 'timedelta' is not defined
+2025-01-18 23:29:50,467 - __main__ - INFO - Processing email b'25'
+2025-01-18 23:29:50,597 - __main__ - INFO - Processing multipart email
+2025-01-18 23:29:50,597 - __main__ - INFO - Email body length: 1573 characters
+2025-01-18 23:29:50,597 - __main__ - INFO - Email body: ---------- Forwarded message ---------
+From: Cole Penny <colepenny123@gmail.com>
+Date: Fri, Jan 17, 2025 at 07:56
+Subject: Make up options
+To: Cole Penny <colepenny123@gmail.com>
+
+
+Hi all,
+
+I hope your new year is off to a great start. I am going to offer a few
+make up sessions for our missed December clinic below. You are welcome to
+attend any of these dates.
+
+Please see details below. All sessions will be again at Scout field.
+
+*Sunday January 26th: *
+12.15-1.15pm (Girls)
+1.15-2.15pm (Boys)
+
+*Friday January 31st:*
+3.45-4.45pm (Girls & Boys)
+
+*Sunday February 2nd:*
+10-11am (Girls & Boys)
+
+If you can’t make any of the dates, you’re welcome to attend a session in
+my February program, or in the spring.
+
+I appreciate the times and days may vary but I am trying to be flexible
+with offerings for everyone. *If the weather forces any cancellation to
+these dates, I’ll offer further dates in March, as I have a February
+program already scheduled.*
+
+Please let me know if you’ve any questions about the make ups, or wish to
+register for the February program.
+
+Thank you,
+
+On Sunday, December 22, 2024, Cole Penny <colepenny123@gmail.com> wrote:
+
+> Hi all,
+>
+> Due to the weather today there’ll be no soccer. I will schedule a
+> make-up session for the new year and will confirm details after the
+> holidays.
+>
+> If you can’t attend the make-up you’re welcome to attend any future
+> clinics instead, or we can organize a private lesson.
+>
+> Please let me know if you’ve any questions.
+>
+> Happy holidays to you all!
+>
+
+2025-01-18 23:29:50,597 - __main__ - INFO - Processing email from: job2006feng@gmail.com
+2025-01-18 23:29:50,597 - __main__ - INFO - Extracting event information from email
+2025-01-18 23:29:50,597 - __main__ - INFO - Sending prompt to Gemini: Extract the following information from the email content and return it as valid JSON:
+        - Event name
+        - Participants (list)
+        - Location
+        - Dates and Time
+        - Repeat frequency (if any)
+        - End date (if any)
+        
+        Return only the JSON object with no additional text.
+        
+        Email content:
+        ---------- Forwarded message ---------
+From: Cole Penny <colepenny123@gmail.com>
+Date: Fri, Jan 17, 2025 at 07:56
+Subject: Make up options
+To: Cole Penny <colepenny123@gmail.com>
+
+
+Hi all,
+
+I hope your new year is off to a great start. I am going to offer a few
+make up sessions for our missed December clinic below. You are welcome to
+attend any of these dates.
+
+Please see details below. All sessions will be again at Scout field.
+
+*Sunday January 26th: *
+12.15-1.15pm (Girls)
+1.15-2.15pm (Boys)
+
+*Friday January 31st:*
+3.45-4.45pm (Girls & Boys)
+
+*Sunday February 2nd:*
+10-11am (Girls & Boys)
+
+If you can’t make any of the dates, you’re welcome to attend a session in
+my February program, or in the spring.
+
+I appreciate the times and days may vary but I am trying to be flexible
+with offerings for everyone. *If the weather forces any cancellation to
+these dates, I’ll offer further dates in March, as I have a February
+program already scheduled.*
+
+Please let me know if you’ve any questions about the make ups, or wish to
+register for the February program.
+
+Thank you,
+
+On Sunday, December 22, 2024, Cole Penny <colepenny123@gmail.com> wrote:
+
+> Hi all,
+>
+> Due to the weather today there’ll be no soccer. I will schedule a
+> make-up session for the new year and will confirm details after the
+> holidays.
+>
+> If you can’t attend the make-up you’re welcome to attend any future
+> clinics instead, or we can organize a private lesson.
+>
+> Please let me know if you’ve any questions.
+>
+> Happy holidays to you all!
+>
+
+        
+2025-01-18 23:29:55,177 - __main__ - INFO - Raw response: response:
+GenerateContentResponse(
+    done=True,
+    iterator=None,
+    result=protos.GenerateContentResponse({
+      "candidates": [
+        {
+          "content": {
+            "parts": [
+              {
+                "text": "```json\n{\n  \"Event name\": \"Make Up Soccer Clinic\",\n  \"Participants\": [\n    \"Girls\",\n    \"Boys\"\n  ],\n  \"Location\": \"Scout field\",\n  \"Dates and Time\": [\n    {\n      \"date\": \"Sunday, January 26th\",\n      \"time\": [\n        \"12:15-1:15pm (Girls)\",\n        \"1:15-2:15pm (Boys)\"\n      ]\n    },\n    {\n      \"date\": \"Friday, January 31st\",\n      \"time\": \"3:45-4:45pm (Girls & Boys)\"\n    },\n    {\n      \"date\": \"Sunday, February 2nd\",\n      \"time\": \"10-11am (Girls & Boys)\"\n    }\n  ],\n  \"Repeat frequency\": null,\n  \"End date\": null\n}\n```"
+              }
+            ],
+            "role": "model"
+          },
+          "finish_reason": "STOP",
+          "avg_logprobs": -0.0020911622215324726
+        }
+      ],
+      "usage_metadata": {
+        "prompt_token_count": 584,
+        "candidates_token_count": 213,
+        "total_token_count": 797
+      }
+    }),
+)
+2025-01-18 23:29:55,179 - __main__ - INFO - Extracted JSON string: {
+  "Event name": "Make Up Soccer Clinic",
+  "Participants": [
+    "Girls",
+    "Boys"
+  ],
+  "Location": "Scout field",
+  "Dates and Time": [
+    {
+      "date": "Sunday, January 26th",
+      "time": [
+        "12:15-1:15pm (Girls)",
+        "1:15-2:15pm (Boys)"
+      ]
+    },
+    {
+      "date": "Friday, January 31st",
+      "time": "3:45-4:45pm (Girls & Boys)"
+    },
+    {
+      "date": "Sunday, February 2nd",
+      "time": "10-11am (Girls & Boys)"
+    }
+  ],
+  "Repeat frequency": null,
+  "End date": null
+}
+2025-01-18 23:29:55,179 - __main__ - INFO - Successfully extracted event info: {
+  "Event name": "Make Up Soccer Clinic",
+  "Participants": [
+    "Girls",
+    "Boys"
+  ],
+  "Location": "Scout field",
+  "Dates and Time": [
+    {
+      "date": "Sunday, January 26th",
+      "time": [
+        "12:15-1:15pm (Girls)",
+        "1:15-2:15pm (Boys)"
+      ]
+    },
+    {
+      "date": "Friday, January 31st",
+      "time": "3:45-4:45pm (Girls & Boys)"
+    },
+    {
+      "date": "Sunday, February 2nd",
+      "time": "10-11am (Girls & Boys)"
+    }
+  ],
+  "Repeat frequency": null,
+  "End date": null
+}
+2025-01-18 23:29:55,180 - __main__ - INFO - Saving event to database
+2025-01-18 23:29:55,181 - __main__ - INFO - Checking for duplicate event: None
+2025-01-18 23:29:55,181 - __main__ - INFO - Duplicate check result: No duplicate found
+2025-01-18 23:29:55,183 - __main__ - INFO - Successfully saved event e4b58d5a-3798-477a-9aa6-c878970db8ba to database
+2025-01-18 23:29:55,183 - __main__ - INFO - Creating calendar invite for event: None
+2025-01-18 23:29:55,183 - __main__ - ERROR - Invalid date format in event_info
+2025-01-18 23:29:55,183 - __main__ - ERROR - Error creating calendar invite: name 'timedelta' is not defined
+2025-01-18 23:29:55,183 - __main__ - ERROR - Failed to send calendar invite: name 'timedelta' is not defined
+2025-01-18 23:29:55,183 - __main__ - INFO - Logging out from Gmail
+2025-01-18 23:37:46,083 - __main__ - INFO - Initializing EmailEventProcessor
+2025-01-18 23:37:46,083 - __main__ - INFO - Successfully initialized Gemini model
+2025-01-18 23:37:46,083 - __main__ - INFO - Starting email processing
+2025-01-18 23:37:46,083 - __main__ - INFO - Connecting to Gmail...
+2025-01-18 23:37:46,463 - __main__ - INFO - Successfully connected to Gmail
+2025-01-18 23:37:46,515 - __main__ - INFO - Searching for emails with subject 'create event'
+2025-01-18 23:37:46,572 - __main__ - INFO - Found 2 matching emails
+2025-01-18 23:37:46,572 - __main__ - INFO - Processing email b'19'
+2025-01-18 23:37:46,836 - __main__ - INFO - Processing multipart email
+2025-01-18 23:37:46,836 - __main__ - INFO - Email body length: 1360 characters
+2025-01-18 23:37:46,836 - __main__ - INFO - Email body: ---------- Forwarded message ---------
+From: VFS Global <donotreply@vfsglobal.com>
+Date: Thu, Jan 9, 2025 at 10:24 PM
+Subject: Appointment Confirmation
+To: <job2006feng@gmail.com>, <JOB2006FENG@gmail.com>
+
+
+VFS Appointment System
+
+Dear Applicant,
+
+Please note that your appointment for Unique Reference Number *
+USA61653801887 * on * 15-01-2025 * at * 9:30 * at 128E 32nd Street, 3rd
+Floor, New York,New York,United States of America,10016.
+
+Please find enclosed your Appointment Letter. Kindly print it and bring it
+with you on your appointment day so you will be allowed to access the
+center. On your appointment day, you must bring the documents required to
+apply for your visa.
+
+In case of any applicable refunds, you will receive an email notification
+once your refund processing has been initiated. Please check the refunds
+policy on our website for more details.
+
+Thank you for your understanding and cooperation.
+
+Kind regards,VFS Global Team
+
+This is an automatically generated email – please do not reply to it. If
+you have any queries or require further assistance, please reach out to our
+customer support team at the numbers mentioned on our website.
+
+Helpline Number : 13472523055
+
+Email: Info.FranceUSA@vfsglobal.com
+
+Website: www.vfsglobal.com/France/USA
+
+
+
+Partnering Governments. Providing Solutions.
+
+2025-01-18 23:37:46,836 - __main__ - INFO - Processing email from: job2006feng@gmail.com
+2025-01-18 23:37:46,836 - __main__ - INFO - Extracting event information from email
+2025-01-18 23:37:46,836 - __main__ - INFO - Sending prompt to Gemini: Extract the following information from the email content and return it as valid JSON:
+        - Event name
+        - Participants (list)
+        - Location
+        - Dates and Time
+        - Repeat frequency (if any)
+        - End date (if any)
+        
+        Return only the JSON object with no additional text.
+        
+        Email content:
+        ---------- Forwarded message ---------
+From: VFS Global <donotreply@vfsglobal.com>
+Date: Thu, Jan 9, 2025 at 10:24 PM
+Subject: Appointment Confirmation
+To: <job2006feng@gmail.com>, <JOB2006FENG@gmail.com>
+
+
+VFS Appointment System
+
+Dear Applicant,
+
+Please note that your appointment for Unique Reference Number *
+USA61653801887 * on * 15-01-2025 * at * 9:30 * at 128E 32nd Street, 3rd
+Floor, New York,New York,United States of America,10016.
+
+Please find enclosed your Appointment Letter. Kindly print it and bring it
+with you on your appointment day so you will be allowed to access the
+center. On your appointment day, you must bring the documents required to
+apply for your visa.
+
+In case of any applicable refunds, you will receive an email notification
+once your refund processing has been initiated. Please check the refunds
+policy on our website for more details.
+
+Thank you for your understanding and cooperation.
+
+Kind regards,VFS Global Team
+
+This is an automatically generated email – please do not reply to it. If
+you have any queries or require further assistance, please reach out to our
+customer support team at the numbers mentioned on our website.
+
+Helpline Number : 13472523055
+
+Email: Info.FranceUSA@vfsglobal.com
+
+Website: www.vfsglobal.com/France/USA
+
+
+
+Partnering Governments. Providing Solutions.
+
+        
+2025-01-18 23:37:50,042 - __main__ - INFO - Raw response: response:
+GenerateContentResponse(
+    done=True,
+    iterator=None,
+    result=protos.GenerateContentResponse({
+      "candidates": [
+        {
+          "content": {
+            "parts": [
+              {
+                "text": "```json\n{\n  \"Event name\": \"Visa Appointment\",\n  \"Participants\": [\n    \"job2006feng@gmail.com\",\n    \"JOB2006FENG@gmail.com\"\n  ],\n  \"Location\": \"128E 32nd Street, 3rd Floor, New York, New York, United States of America, 10016\",\n  \"Dates and Time\": \"15-01-2025 at 9:30\",\n  \"Repeat frequency\": null,\n  \"End date\": null\n}\n```"
+              }
+            ],
+            "role": "model"
+          },
+          "finish_reason": "STOP",
+          "avg_logprobs": -0.0024606433179643417
+        }
+      ],
+      "usage_metadata": {
+        "prompt_token_count": 491,
+        "candidates_token_count": 135,
+        "total_token_count": 626
+      }
+    }),
+)
+2025-01-18 23:37:50,042 - __main__ - INFO - Extracted JSON string: {
+  "Event name": "Visa Appointment",
+  "Participants": [
+    "job2006feng@gmail.com",
+    "JOB2006FENG@gmail.com"
+  ],
+  "Location": "128E 32nd Street, 3rd Floor, New York, New York, United States of America, 10016",
+  "Dates and Time": "15-01-2025 at 9:30",
+  "Repeat frequency": null,
+  "End date": null
+}
+2025-01-18 23:37:50,042 - __main__ - INFO - Successfully extracted event info: {
+  "Event name": "Visa Appointment",
+  "Participants": [
+    "job2006feng@gmail.com",
+    "JOB2006FENG@gmail.com"
+  ],
+  "Location": "128E 32nd Street, 3rd Floor, New York, New York, United States of America, 10016",
+  "Dates and Time": "15-01-2025 at 9:30",
+  "Repeat frequency": null,
+  "End date": null
+}
+2025-01-18 23:37:50,042 - __main__ - INFO - Saving event to database
+2025-01-18 23:37:50,045 - __main__ - INFO - Checking for duplicate event: None
+2025-01-18 23:37:50,045 - __main__ - INFO - Duplicate check result: No duplicate found
+2025-01-18 23:37:50,047 - __main__ - INFO - Successfully saved event 0e8e80fd-606a-4361-b6e9-112783cc1b2e to database
+2025-01-18 23:37:50,047 - __main__ - INFO - Creating calendar invite for event: None
+2025-01-18 23:37:50,048 - __main__ - ERROR - Invalid date format in event_info: No date/time found in event info
+2025-01-18 23:37:50,048 - __main__ - ERROR - Date string was: None
+2025-01-18 23:37:50,048 - __main__ - WARNING - Using current time as fallback: 2025-01-18 23:37:50.048109
+2025-01-18 23:37:50,048 - __main__ - INFO - Calendar invite created successfully
+2025-01-18 23:37:50,050 - __main__ - INFO - Sending calendar invite to job2006feng@gmail.com
+2025-01-18 23:37:51,300 - __main__ - INFO - Calendar invite sent successfully to job2006feng@gmail.com
+2025-01-18 23:37:51,300 - __main__ - INFO - Processing email b'25'
+2025-01-18 23:37:51,361 - __main__ - INFO - Processing multipart email
+2025-01-18 23:37:51,361 - __main__ - INFO - Email body length: 1573 characters
+2025-01-18 23:37:51,361 - __main__ - INFO - Email body: ---------- Forwarded message ---------
+From: Cole Penny <colepenny123@gmail.com>
+Date: Fri, Jan 17, 2025 at 07:56
+Subject: Make up options
+To: Cole Penny <colepenny123@gmail.com>
+
+
+Hi all,
+
+I hope your new year is off to a great start. I am going to offer a few
+make up sessions for our missed December clinic below. You are welcome to
+attend any of these dates.
+
+Please see details below. All sessions will be again at Scout field.
+
+*Sunday January 26th: *
+12.15-1.15pm (Girls)
+1.15-2.15pm (Boys)
+
+*Friday January 31st:*
+3.45-4.45pm (Girls & Boys)
+
+*Sunday February 2nd:*
+10-11am (Girls & Boys)
+
+If you can’t make any of the dates, you’re welcome to attend a session in
+my February program, or in the spring.
+
+I appreciate the times and days may vary but I am trying to be flexible
+with offerings for everyone. *If the weather forces any cancellation to
+these dates, I’ll offer further dates in March, as I have a February
+program already scheduled.*
+
+Please let me know if you’ve any questions about the make ups, or wish to
+register for the February program.
+
+Thank you,
+
+On Sunday, December 22, 2024, Cole Penny <colepenny123@gmail.com> wrote:
+
+> Hi all,
+>
+> Due to the weather today there’ll be no soccer. I will schedule a
+> make-up session for the new year and will confirm details after the
+> holidays.
+>
+> If you can’t attend the make-up you’re welcome to attend any future
+> clinics instead, or we can organize a private lesson.
+>
+> Please let me know if you’ve any questions.
+>
+> Happy holidays to you all!
+>
+
+2025-01-18 23:37:51,362 - __main__ - INFO - Processing email from: job2006feng@gmail.com
+2025-01-18 23:37:51,362 - __main__ - INFO - Extracting event information from email
+2025-01-18 23:37:51,362 - __main__ - INFO - Sending prompt to Gemini: Extract the following information from the email content and return it as valid JSON:
+        - Event name
+        - Participants (list)
+        - Location
+        - Dates and Time
+        - Repeat frequency (if any)
+        - End date (if any)
+        
+        Return only the JSON object with no additional text.
+        
+        Email content:
+        ---------- Forwarded message ---------
+From: Cole Penny <colepenny123@gmail.com>
+Date: Fri, Jan 17, 2025 at 07:56
+Subject: Make up options
+To: Cole Penny <colepenny123@gmail.com>
+
+
+Hi all,
+
+I hope your new year is off to a great start. I am going to offer a few
+make up sessions for our missed December clinic below. You are welcome to
+attend any of these dates.
+
+Please see details below. All sessions will be again at Scout field.
+
+*Sunday January 26th: *
+12.15-1.15pm (Girls)
+1.15-2.15pm (Boys)
+
+*Friday January 31st:*
+3.45-4.45pm (Girls & Boys)
+
+*Sunday February 2nd:*
+10-11am (Girls & Boys)
+
+If you can’t make any of the dates, you’re welcome to attend a session in
+my February program, or in the spring.
+
+I appreciate the times and days may vary but I am trying to be flexible
+with offerings for everyone. *If the weather forces any cancellation to
+these dates, I’ll offer further dates in March, as I have a February
+program already scheduled.*
+
+Please let me know if you’ve any questions about the make ups, or wish to
+register for the February program.
+
+Thank you,
+
+On Sunday, December 22, 2024, Cole Penny <colepenny123@gmail.com> wrote:
+
+> Hi all,
+>
+> Due to the weather today there’ll be no soccer. I will schedule a
+> make-up session for the new year and will confirm details after the
+> holidays.
+>
+> If you can’t attend the make-up you’re welcome to attend any future
+> clinics instead, or we can organize a private lesson.
+>
+> Please let me know if you’ve any questions.
+>
+> Happy holidays to you all!
+>
+
+        
+2025-01-18 23:37:56,071 - __main__ - INFO - Raw response: response:
+GenerateContentResponse(
+    done=True,
+    iterator=None,
+    result=protos.GenerateContentResponse({
+      "candidates": [
+        {
+          "content": {
+            "parts": [
+              {
+                "text": "```json\n{\n  \"Event name\": \"Make Up Soccer Clinic\",\n  \"Participants\": [\n    \"Girls\",\n    \"Boys\"\n  ],\n  \"Location\": \"Scout field\",\n  \"Dates and Time\": [\n    {\n      \"date\": \"Sunday, January 26th\",\n      \"time\": [\n        \"12:15-1:15pm (Girls)\",\n        \"1:15-2:15pm (Boys)\"\n      ]\n    },\n    {\n      \"date\": \"Friday, January 31st\",\n      \"time\": \"3:45-4:45pm (Girls & Boys)\"\n    },\n    {\n      \"date\": \"Sunday, February 2nd\",\n      \"time\": \"10-11am (Girls & Boys)\"\n    }\n  ],\n  \"Repeat frequency\": null,\n  \"End date\": null\n}\n```"
+              }
+            ],
+            "role": "model"
+          },
+          "finish_reason": "STOP",
+          "avg_logprobs": -0.002493225912532896
+        }
+      ],
+      "usage_metadata": {
+        "prompt_token_count": 584,
+        "candidates_token_count": 213,
+        "total_token_count": 797
+      }
+    }),
+)
+2025-01-18 23:37:56,071 - __main__ - INFO - Extracted JSON string: {
+  "Event name": "Make Up Soccer Clinic",
+  "Participants": [
+    "Girls",
+    "Boys"
+  ],
+  "Location": "Scout field",
+  "Dates and Time": [
+    {
+      "date": "Sunday, January 26th",
+      "time": [
+        "12:15-1:15pm (Girls)",
+        "1:15-2:15pm (Boys)"
+      ]
+    },
+    {
+      "date": "Friday, January 31st",
+      "time": "3:45-4:45pm (Girls & Boys)"
+    },
+    {
+      "date": "Sunday, February 2nd",
+      "time": "10-11am (Girls & Boys)"
+    }
+  ],
+  "Repeat frequency": null,
+  "End date": null
+}
+2025-01-18 23:37:56,072 - __main__ - INFO - Successfully extracted event info: {
+  "Event name": "Make Up Soccer Clinic",
+  "Participants": [
+    "Girls",
+    "Boys"
+  ],
+  "Location": "Scout field",
+  "Dates and Time": [
+    {
+      "date": "Sunday, January 26th",
+      "time": [
+        "12:15-1:15pm (Girls)",
+        "1:15-2:15pm (Boys)"
+      ]
+    },
+    {
+      "date": "Friday, January 31st",
+      "time": "3:45-4:45pm (Girls & Boys)"
+    },
+    {
+      "date": "Sunday, February 2nd",
+      "time": "10-11am (Girls & Boys)"
+    }
+  ],
+  "Repeat frequency": null,
+  "End date": null
+}
+2025-01-18 23:37:56,072 - __main__ - INFO - Saving event to database
+2025-01-18 23:37:56,073 - __main__ - INFO - Checking for duplicate event: None
+2025-01-18 23:37:56,073 - __main__ - INFO - Duplicate check result: No duplicate found
+2025-01-18 23:37:56,076 - __main__ - INFO - Successfully saved event 2b0ee827-0a70-4211-9b49-aacca13a4afa to database
+2025-01-18 23:37:56,076 - __main__ - INFO - Creating calendar invite for event: None
+2025-01-18 23:37:56,076 - __main__ - ERROR - Invalid date format in event_info: No date/time found in event info
+2025-01-18 23:37:56,076 - __main__ - ERROR - Date string was: None
+2025-01-18 23:37:56,076 - __main__ - WARNING - Using current time as fallback: 2025-01-18 23:37:56.076896
+2025-01-18 23:37:56,077 - __main__ - INFO - Calendar invite created successfully
+2025-01-18 23:37:56,077 - __main__ - INFO - Sending calendar invite to job2006feng@gmail.com
+2025-01-18 23:37:57,133 - __main__ - INFO - Calendar invite sent successfully to job2006feng@gmail.com
+2025-01-18 23:37:57,133 - __main__ - INFO - Logging out from Gmail
+2025-01-20 15:04:39,159 - __main__ - INFO - Initializing EmailEventProcessor
+2025-01-20 15:04:39,160 - __main__ - INFO - Successfully initialized Gemini model
+2025-01-20 15:04:39,160 - __main__ - INFO - Starting email processing
+2025-01-20 15:04:39,160 - __main__ - INFO - Connecting to Gmail...
+2025-01-20 15:04:39,394 - __main__ - INFO - Successfully connected to Gmail
+2025-01-20 15:04:39,456 - __main__ - INFO - Searching for emails with subject 'create event'
+2025-01-20 15:04:39,532 - __main__ - INFO - Found 2 matching emails
+2025-01-20 15:04:39,532 - __main__ - INFO - Processing email b'19'
+2025-01-20 15:04:40,094 - __main__ - INFO - Processing multipart email
+2025-01-20 15:04:40,095 - __main__ - INFO - Email body length: 1360 characters
+2025-01-20 15:04:40,095 - __main__ - INFO - Email body: ---------- Forwarded message ---------
+From: VFS Global <donotreply@vfsglobal.com>
+Date: Thu, Jan 9, 2025 at 10:24 PM
+Subject: Appointment Confirmation
+To: <job2006feng@gmail.com>, <JOB2006FENG@gmail.com>
+
+
+VFS Appointment System
+
+Dear Applicant,
+
+Please note that your appointment for Unique Reference Number *
+USA61653801887 * on * 15-01-2025 * at * 9:30 * at 128E 32nd Street, 3rd
+Floor, New York,New York,United States of America,10016.
+
+Please find enclosed your Appointment Letter. Kindly print it and bring it
+with you on your appointment day so you will be allowed to access the
+center. On your appointment day, you must bring the documents required to
+apply for your visa.
+
+In case of any applicable refunds, you will receive an email notification
+once your refund processing has been initiated. Please check the refunds
+policy on our website for more details.
+
+Thank you for your understanding and cooperation.
+
+Kind regards,VFS Global Team
+
+This is an automatically generated email – please do not reply to it. If
+you have any queries or require further assistance, please reach out to our
+customer support team at the numbers mentioned on our website.
+
+Helpline Number : 13472523055
+
+Email: Info.FranceUSA@vfsglobal.com
+
+Website: www.vfsglobal.com/France/USA
+
+
+
+Partnering Governments. Providing Solutions.
+
+2025-01-20 15:04:40,095 - __main__ - INFO - Processing email from: job2006feng@gmail.com
+2025-01-20 15:04:40,095 - __main__ - INFO - Extracting event information from email
+2025-01-20 15:04:40,095 - __main__ - INFO - Sending prompt to Gemini: Extract the following information from the email content and return it as valid JSON:
+        - Event name
+        - Participants (list)
+        - Location
+        - Dates and Time as formatted string as "15-01-2025 at 9:30, 26th at 12:15-1:15pm, 31st at 3:45-4:45pm" seprated by comma
+        - Repeat frequency (if any)
+        - End date (if any)
+        
+        Return only the JSON object with no additional text.
+        
+        Email content:
+        ---------- Forwarded message ---------
+From: VFS Global <donotreply@vfsglobal.com>
+Date: Thu, Jan 9, 2025 at 10:24 PM
+Subject: Appointment Confirmation
+To: <job2006feng@gmail.com>, <JOB2006FENG@gmail.com>
+
+
+VFS Appointment System
+
+Dear Applicant,
+
+Please note that your appointment for Unique Reference Number *
+USA61653801887 * on * 15-01-2025 * at * 9:30 * at 128E 32nd Street, 3rd
+Floor, New York,New York,United States of America,10016.
+
+Please find enclosed your Appointment Letter. Kindly print it and bring it
+with you on your appointment day so you will be allowed to access the
+center. On your appointment day, you must bring the documents required to
+apply for your visa.
+
+In case of any applicable refunds, you will receive an email notification
+once your refund processing has been initiated. Please check the refunds
+policy on our website for more details.
+
+Thank you for your understanding and cooperation.
+
+Kind regards,VFS Global Team
+
+This is an automatically generated email – please do not reply to it. If
+you have any queries or require further assistance, please reach out to our
+customer support team at the numbers mentioned on our website.
+
+Helpline Number : 13472523055
+
+Email: Info.FranceUSA@vfsglobal.com
+
+Website: www.vfsglobal.com/France/USA
+
+
+
+Partnering Governments. Providing Solutions.
+
+        
+2025-01-20 15:04:43,080 - __main__ - INFO - Raw response: response:
+GenerateContentResponse(
+    done=True,
+    iterator=None,
+    result=protos.GenerateContentResponse({
+      "candidates": [
+        {
+          "content": {
+            "parts": [
+              {
+                "text": "```json\n{\n  \"Event name\": \"Appointment for Unique Reference Number USA61653801887\",\n  \"Participants\": [],\n  \"Location\": \"128E 32nd Street, 3rd Floor, New York, New York, United States of America, 10016\",\n  \"Dates and Time\": \"15-01-2025 at 9:30\",\n  \"Repeat frequency\": null,\n  \"End date\": null\n}\n```"
+              }
+            ],
+            "role": "model"
+          },
+          "finish_reason": "STOP",
+          "avg_logprobs": -0.01985610137551518
+        }
+      ],
+      "usage_metadata": {
+        "prompt_token_count": 553,
+        "candidates_token_count": 118,
+        "total_token_count": 671
+      }
+    }),
+)
+2025-01-20 15:04:43,081 - __main__ - INFO - Extracted JSON string: {
+  "Event name": "Appointment for Unique Reference Number USA61653801887",
+  "Participants": [],
+  "Location": "128E 32nd Street, 3rd Floor, New York, New York, United States of America, 10016",
+  "Dates and Time": "15-01-2025 at 9:30",
+  "Repeat frequency": null,
+  "End date": null
+}
+2025-01-20 15:04:43,081 - __main__ - INFO - Successfully extracted event info: {
+  "Event name": "Appointment for Unique Reference Number USA61653801887",
+  "Participants": [],
+  "Location": "128E 32nd Street, 3rd Floor, New York, New York, United States of America, 10016",
+  "Dates and Time": "15-01-2025 at 9:30",
+  "Repeat frequency": null,
+  "End date": null
+}
+2025-01-20 15:04:43,081 - __main__ - INFO - Saving event to database
+2025-01-20 15:04:43,083 - __main__ - INFO - Checking for duplicate event: None
+2025-01-20 15:04:43,084 - __main__ - INFO - Duplicate check result: No duplicate found
+2025-01-20 15:04:43,087 - __main__ - INFO - Successfully saved event 8810585f-5294-451e-90aa-d1bfd51e2a02 to database
+2025-01-20 15:04:43,087 - __main__ - INFO - Creating calendar invite for event: None
+2025-01-20 15:04:43,087 - __main__ - ERROR - Invalid date format in event_info: No date/time found in event info
+2025-01-20 15:04:43,087 - __main__ - ERROR - Date string was: None
+2025-01-20 15:04:43,087 - __main__ - WARNING - Using current time as fallback: 2025-01-20 15:04:43.087924
+2025-01-20 15:04:43,088 - __main__ - INFO - Calendar invite created successfully
+2025-01-20 15:04:43,090 - __main__ - INFO - Sending calendar invite to job2006feng@gmail.com
+2025-01-20 15:04:44,226 - __main__ - INFO - Calendar invite sent successfully to job2006feng@gmail.com
+2025-01-20 15:04:44,226 - __main__ - INFO - Processing email b'25'
+2025-01-20 15:04:44,277 - __main__ - INFO - Processing multipart email
+2025-01-20 15:04:44,277 - __main__ - INFO - Email body length: 1573 characters
+2025-01-20 15:04:44,277 - __main__ - INFO - Email body: ---------- Forwarded message ---------
+From: Cole Penny <colepenny123@gmail.com>
+Date: Fri, Jan 17, 2025 at 07:56
+Subject: Make up options
+To: Cole Penny <colepenny123@gmail.com>
+
+
+Hi all,
+
+I hope your new year is off to a great start. I am going to offer a few
+make up sessions for our missed December clinic below. You are welcome to
+attend any of these dates.
+
+Please see details below. All sessions will be again at Scout field.
+
+*Sunday January 26th: *
+12.15-1.15pm (Girls)
+1.15-2.15pm (Boys)
+
+*Friday January 31st:*
+3.45-4.45pm (Girls & Boys)
+
+*Sunday February 2nd:*
+10-11am (Girls & Boys)
+
+If you can’t make any of the dates, you’re welcome to attend a session in
+my February program, or in the spring.
+
+I appreciate the times and days may vary but I am trying to be flexible
+with offerings for everyone. *If the weather forces any cancellation to
+these dates, I’ll offer further dates in March, as I have a February
+program already scheduled.*
+
+Please let me know if you’ve any questions about the make ups, or wish to
+register for the February program.
+
+Thank you,
+
+On Sunday, December 22, 2024, Cole Penny <colepenny123@gmail.com> wrote:
+
+> Hi all,
+>
+> Due to the weather today there’ll be no soccer. I will schedule a
+> make-up session for the new year and will confirm details after the
+> holidays.
+>
+> If you can’t attend the make-up you’re welcome to attend any future
+> clinics instead, or we can organize a private lesson.
+>
+> Please let me know if you’ve any questions.
+>
+> Happy holidays to you all!
+>
+
+2025-01-20 15:04:44,277 - __main__ - INFO - Processing email from: job2006feng@gmail.com
+2025-01-20 15:04:44,277 - __main__ - INFO - Extracting event information from email
+2025-01-20 15:04:44,277 - __main__ - INFO - Sending prompt to Gemini: Extract the following information from the email content and return it as valid JSON:
+        - Event name
+        - Participants (list)
+        - Location
+        - Dates and Time as formatted string as "15-01-2025 at 9:30, 26th at 12:15-1:15pm, 31st at 3:45-4:45pm" seprated by comma
+        - Repeat frequency (if any)
+        - End date (if any)
+        
+        Return only the JSON object with no additional text.
+        
+        Email content:
+        ---------- Forwarded message ---------
+From: Cole Penny <colepenny123@gmail.com>
+Date: Fri, Jan 17, 2025 at 07:56
+Subject: Make up options
+To: Cole Penny <colepenny123@gmail.com>
+
+
+Hi all,
+
+I hope your new year is off to a great start. I am going to offer a few
+make up sessions for our missed December clinic below. You are welcome to
+attend any of these dates.
+
+Please see details below. All sessions will be again at Scout field.
+
+*Sunday January 26th: *
+12.15-1.15pm (Girls)
+1.15-2.15pm (Boys)
+
+*Friday January 31st:*
+3.45-4.45pm (Girls & Boys)
+
+*Sunday February 2nd:*
+10-11am (Girls & Boys)
+
+If you can’t make any of the dates, you’re welcome to attend a session in
+my February program, or in the spring.
+
+I appreciate the times and days may vary but I am trying to be flexible
+with offerings for everyone. *If the weather forces any cancellation to
+these dates, I’ll offer further dates in March, as I have a February
+program already scheduled.*
+
+Please let me know if you’ve any questions about the make ups, or wish to
+register for the February program.
+
+Thank you,
+
+On Sunday, December 22, 2024, Cole Penny <colepenny123@gmail.com> wrote:
+
+> Hi all,
+>
+> Due to the weather today there’ll be no soccer. I will schedule a
+> make-up session for the new year and will confirm details after the
+> holidays.
+>
+> If you can’t attend the make-up you’re welcome to attend any future
+> clinics instead, or we can organize a private lesson.
+>
+> Please let me know if you’ve any questions.
+>
+> Happy holidays to you all!
+>
+
+        
+2025-01-20 15:04:47,380 - __main__ - INFO - Raw response: response:
+GenerateContentResponse(
+    done=True,
+    iterator=None,
+    result=protos.GenerateContentResponse({
+      "candidates": [
+        {
+          "content": {
+            "parts": [
+              {
+                "text": "```json\n{\n  \"Event name\": \"Make up sessions for missed December clinic\",\n  \"Participants\": [\n    \"Girls\",\n    \"Boys\"\n  ],\n  \"Location\": \"Scout field\",\n  \"Dates and Time\": \"26th at 12:15-1:15pm, 31st at 3:45-4:45pm, 02-02-2025 at 10:00-11:00am\",\n  \"Repeat frequency\": null,\n  \"End date\": null\n}\n```"
+              }
+            ],
+            "role": "model"
+          },
+          "finish_reason": "STOP",
+          "avg_logprobs": -0.0026048172765703345
+        }
+      ],
+      "usage_metadata": {
+        "prompt_token_count": 646,
+        "candidates_token_count": 134,
+        "total_token_count": 780
+      }
+    }),
+)
+2025-01-20 15:04:47,380 - __main__ - INFO - Extracted JSON string: {
+  "Event name": "Make up sessions for missed December clinic",
+  "Participants": [
+    "Girls",
+    "Boys"
+  ],
+  "Location": "Scout field",
+  "Dates and Time": "26th at 12:15-1:15pm, 31st at 3:45-4:45pm, 02-02-2025 at 10:00-11:00am",
+  "Repeat frequency": null,
+  "End date": null
+}
+2025-01-20 15:04:47,381 - __main__ - INFO - Successfully extracted event info: {
+  "Event name": "Make up sessions for missed December clinic",
+  "Participants": [
+    "Girls",
+    "Boys"
+  ],
+  "Location": "Scout field",
+  "Dates and Time": "26th at 12:15-1:15pm, 31st at 3:45-4:45pm, 02-02-2025 at 10:00-11:00am",
+  "Repeat frequency": null,
+  "End date": null
+}
+2025-01-20 15:04:47,381 - __main__ - INFO - Saving event to database
+2025-01-20 15:04:47,382 - __main__ - INFO - Checking for duplicate event: None
+2025-01-20 15:04:47,382 - __main__ - INFO - Duplicate check result: No duplicate found
+2025-01-20 15:04:47,384 - __main__ - INFO - Successfully saved event b03c63aa-d101-4141-999b-1ca2ca6b5196 to database
+2025-01-20 15:04:47,384 - __main__ - INFO - Creating calendar invite for event: None
+2025-01-20 15:04:47,385 - __main__ - ERROR - Invalid date format in event_info: No date/time found in event info
+2025-01-20 15:04:47,385 - __main__ - ERROR - Date string was: None
+2025-01-20 15:04:47,385 - __main__ - WARNING - Using current time as fallback: 2025-01-20 15:04:47.385228
+2025-01-20 15:04:47,385 - __main__ - INFO - Calendar invite created successfully
+2025-01-20 15:04:47,386 - __main__ - INFO - Sending calendar invite to job2006feng@gmail.com
+2025-01-20 15:04:48,217 - __main__ - INFO - Calendar invite sent successfully to job2006feng@gmail.com
+2025-01-20 15:04:48,218 - __main__ - INFO - Logging out from Gmail
+2025-01-20 15:07:50,658 - __main__ - INFO - Initializing EmailEventProcessor
+2025-01-20 15:07:50,658 - __main__ - INFO - Successfully initialized Gemini model
+2025-01-20 15:07:50,658 - __main__ - INFO - Starting email processing
+2025-01-20 15:07:50,658 - __main__ - INFO - Connecting to Gmail...
+2025-01-20 15:07:50,908 - __main__ - INFO - Successfully connected to Gmail
+2025-01-20 15:07:50,968 - __main__ - INFO - Searching for emails with subject 'create event'
+2025-01-20 15:07:51,032 - __main__ - INFO - Found 2 matching emails
+2025-01-20 15:07:51,032 - __main__ - INFO - Processing email b'19'
+2025-01-20 15:07:51,284 - __main__ - INFO - Processing multipart email
+2025-01-20 15:07:51,284 - __main__ - INFO - Email body length: 1360 characters
+2025-01-20 15:07:51,284 - __main__ - INFO - Email body: ---------- Forwarded message ---------
+From: VFS Global <donotreply@vfsglobal.com>
+Date: Thu, Jan 9, 2025 at 10:24 PM
+Subject: Appointment Confirmation
+To: <job2006feng@gmail.com>, <JOB2006FENG@gmail.com>
+
+
+VFS Appointment System
+
+Dear Applicant,
+
+Please note that your appointment for Unique Reference Number *
+USA61653801887 * on * 15-01-2025 * at * 9:30 * at 128E 32nd Street, 3rd
+Floor, New York,New York,United States of America,10016.
+
+Please find enclosed your Appointment Letter. Kindly print it and bring it
+with you on your appointment day so you will be allowed to access the
+center. On your appointment day, you must bring the documents required to
+apply for your visa.
+
+In case of any applicable refunds, you will receive an email notification
+once your refund processing has been initiated. Please check the refunds
+policy on our website for more details.
+
+Thank you for your understanding and cooperation.
+
+Kind regards,VFS Global Team
+
+This is an automatically generated email – please do not reply to it. If
+you have any queries or require further assistance, please reach out to our
+customer support team at the numbers mentioned on our website.
+
+Helpline Number : 13472523055
+
+Email: Info.FranceUSA@vfsglobal.com
+
+Website: www.vfsglobal.com/France/USA
+
+
+
+Partnering Governments. Providing Solutions.
+
+2025-01-20 15:07:51,284 - __main__ - INFO - Processing email from: job2006feng@gmail.com
+2025-01-20 15:07:51,284 - __main__ - INFO - Extracting event information from email
+2025-01-20 15:07:51,284 - __main__ - INFO - Sending prompt to Gemini: Extract the following information from the email content and return it as valid JSON:
+        - Event name
+        - Participants (list)
+        - Location
+        - Dates and Time as formatted string as "15-01-2025 at 9:30, 26th at 12:15-1:15pm, 31st at 3:45-4:45pm" seprated by comma
+        - Repeat frequency (if any)
+        - End date (if any)
+        
+        Return only the JSON object with no additional text.
+        
+        Email content:
+        ---------- Forwarded message ---------
+From: VFS Global <donotreply@vfsglobal.com>
+Date: Thu, Jan 9, 2025 at 10:24 PM
+Subject: Appointment Confirmation
+To: <job2006feng@gmail.com>, <JOB2006FENG@gmail.com>
+
+
+VFS Appointment System
+
+Dear Applicant,
+
+Please note that your appointment for Unique Reference Number *
+USA61653801887 * on * 15-01-2025 * at * 9:30 * at 128E 32nd Street, 3rd
+Floor, New York,New York,United States of America,10016.
+
+Please find enclosed your Appointment Letter. Kindly print it and bring it
+with you on your appointment day so you will be allowed to access the
+center. On your appointment day, you must bring the documents required to
+apply for your visa.
+
+In case of any applicable refunds, you will receive an email notification
+once your refund processing has been initiated. Please check the refunds
+policy on our website for more details.
+
+Thank you for your understanding and cooperation.
+
+Kind regards,VFS Global Team
+
+This is an automatically generated email – please do not reply to it. If
+you have any queries or require further assistance, please reach out to our
+customer support team at the numbers mentioned on our website.
+
+Helpline Number : 13472523055
+
+Email: Info.FranceUSA@vfsglobal.com
+
+Website: www.vfsglobal.com/France/USA
+
+
+
+Partnering Governments. Providing Solutions.
+
+        
+2025-01-20 15:07:54,467 - __main__ - INFO - Raw response: response:
+GenerateContentResponse(
+    done=True,
+    iterator=None,
+    result=protos.GenerateContentResponse({
+      "candidates": [
+        {
+          "content": {
+            "parts": [
+              {
+                "text": "```json\n{\n  \"Event name\": \"Visa Appointment\",\n  \"Participants\": [\n    \"job2006feng@gmail.com\",\n    \"JOB2006FENG@gmail.com\"\n  ],\n  \"Location\": \"128E 32nd Street, 3rd Floor, New York,New York,United States of America,10016\",\n  \"Dates and Time\": \"15-01-2025 at 9:30\",\n  \"Repeat frequency\": null,\n  \"End date\": null\n}\n```"
+              }
+            ],
+            "role": "model"
+          },
+          "finish_reason": "STOP",
+          "avg_logprobs": -0.004880136963146836
+        }
+      ],
+      "usage_metadata": {
+        "prompt_token_count": 553,
+        "candidates_token_count": 134,
+        "total_token_count": 687
+      }
+    }),
+)
+2025-01-20 15:07:54,467 - __main__ - INFO - Extracted JSON string: {
+  "Event name": "Visa Appointment",
+  "Participants": [
+    "job2006feng@gmail.com",
+    "JOB2006FENG@gmail.com"
+  ],
+  "Location": "128E 32nd Street, 3rd Floor, New York,New York,United States of America,10016",
+  "Dates and Time": "15-01-2025 at 9:30",
+  "Repeat frequency": null,
+  "End date": null
+}
+2025-01-20 15:07:54,467 - __main__ - INFO - Successfully extracted event info: {
+  "Event name": "Visa Appointment",
+  "Participants": [
+    "job2006feng@gmail.com",
+    "JOB2006FENG@gmail.com"
+  ],
+  "Location": "128E 32nd Street, 3rd Floor, New York,New York,United States of America,10016",
+  "Dates and Time": "15-01-2025 at 9:30",
+  "Repeat frequency": null,
+  "End date": null
+}
+2025-01-20 15:07:54,468 - __main__ - INFO - Saving event to database
+2025-01-20 15:07:54,471 - __main__ - INFO - Checking for duplicate event: None
+2025-01-20 15:07:54,472 - __main__ - INFO - Duplicate check result: No duplicate found
+2025-01-20 15:07:54,473 - __main__ - INFO - Successfully saved event 00b19109-d87f-4dd1-a454-36b51bc59b8e to database
+2025-01-20 15:07:54,474 - __main__ - INFO - Creating calendar invite for event: None
+2025-01-20 15:07:54,474 - __main__ - ERROR - Invalid date format in event_info: No date/time found in event info
+2025-01-20 15:07:54,474 - __main__ - ERROR - Date string was: None
+2025-01-20 15:07:54,474 - __main__ - WARNING - Using current time as fallback: 2025-01-20 15:07:54.474330
+2025-01-20 15:07:54,474 - __main__ - INFO - Calendar invite created successfully
+2025-01-20 15:07:54,475 - __main__ - INFO - Sending calendar invite to job2006feng@gmail.com
+2025-01-20 15:07:55,410 - __main__ - INFO - Calendar invite sent successfully to job2006feng@gmail.com
+2025-01-20 15:07:55,410 - __main__ - INFO - Processing email b'25'
+2025-01-20 15:07:55,462 - __main__ - INFO - Processing multipart email
+2025-01-20 15:07:55,463 - __main__ - INFO - Email body length: 1573 characters
+2025-01-20 15:07:55,463 - __main__ - INFO - Email body: ---------- Forwarded message ---------
+From: Cole Penny <colepenny123@gmail.com>
+Date: Fri, Jan 17, 2025 at 07:56
+Subject: Make up options
+To: Cole Penny <colepenny123@gmail.com>
+
+
+Hi all,
+
+I hope your new year is off to a great start. I am going to offer a few
+make up sessions for our missed December clinic below. You are welcome to
+attend any of these dates.
+
+Please see details below. All sessions will be again at Scout field.
+
+*Sunday January 26th: *
+12.15-1.15pm (Girls)
+1.15-2.15pm (Boys)
+
+*Friday January 31st:*
+3.45-4.45pm (Girls & Boys)
+
+*Sunday February 2nd:*
+10-11am (Girls & Boys)
+
+If you can’t make any of the dates, you’re welcome to attend a session in
+my February program, or in the spring.
+
+I appreciate the times and days may vary but I am trying to be flexible
+with offerings for everyone. *If the weather forces any cancellation to
+these dates, I’ll offer further dates in March, as I have a February
+program already scheduled.*
+
+Please let me know if you’ve any questions about the make ups, or wish to
+register for the February program.
+
+Thank you,
+
+On Sunday, December 22, 2024, Cole Penny <colepenny123@gmail.com> wrote:
+
+> Hi all,
+>
+> Due to the weather today there’ll be no soccer. I will schedule a
+> make-up session for the new year and will confirm details after the
+> holidays.
+>
+> If you can’t attend the make-up you’re welcome to attend any future
+> clinics instead, or we can organize a private lesson.
+>
+> Please let me know if you’ve any questions.
+>
+> Happy holidays to you all!
+>
+
+2025-01-20 15:07:55,463 - __main__ - INFO - Processing email from: job2006feng@gmail.com
+2025-01-20 15:07:55,463 - __main__ - INFO - Extracting event information from email
+2025-01-20 15:07:55,463 - __main__ - INFO - Sending prompt to Gemini: Extract the following information from the email content and return it as valid JSON:
+        - Event name
+        - Participants (list)
+        - Location
+        - Dates and Time as formatted string as "15-01-2025 at 9:30, 26th at 12:15-1:15pm, 31st at 3:45-4:45pm" seprated by comma
+        - Repeat frequency (if any)
+        - End date (if any)
+        
+        Return only the JSON object with no additional text.
+        
+        Email content:
+        ---------- Forwarded message ---------
+From: Cole Penny <colepenny123@gmail.com>
+Date: Fri, Jan 17, 2025 at 07:56
+Subject: Make up options
+To: Cole Penny <colepenny123@gmail.com>
+
+
+Hi all,
+
+I hope your new year is off to a great start. I am going to offer a few
+make up sessions for our missed December clinic below. You are welcome to
+attend any of these dates.
+
+Please see details below. All sessions will be again at Scout field.
+
+*Sunday January 26th: *
+12.15-1.15pm (Girls)
+1.15-2.15pm (Boys)
+
+*Friday January 31st:*
+3.45-4.45pm (Girls & Boys)
+
+*Sunday February 2nd:*
+10-11am (Girls & Boys)
+
+If you can’t make any of the dates, you’re welcome to attend a session in
+my February program, or in the spring.
+
+I appreciate the times and days may vary but I am trying to be flexible
+with offerings for everyone. *If the weather forces any cancellation to
+these dates, I’ll offer further dates in March, as I have a February
+program already scheduled.*
+
+Please let me know if you’ve any questions about the make ups, or wish to
+register for the February program.
+
+Thank you,
+
+On Sunday, December 22, 2024, Cole Penny <colepenny123@gmail.com> wrote:
+
+> Hi all,
+>
+> Due to the weather today there’ll be no soccer. I will schedule a
+> make-up session for the new year and will confirm details after the
+> holidays.
+>
+> If you can’t attend the make-up you’re welcome to attend any future
+> clinics instead, or we can organize a private lesson.
+>
+> Please let me know if you’ve any questions.
+>
+> Happy holidays to you all!
+>
+
+        
+2025-01-20 15:07:58,534 - __main__ - INFO - Raw response: response:
+GenerateContentResponse(
+    done=True,
+    iterator=None,
+    result=protos.GenerateContentResponse({
+      "candidates": [
+        {
+          "content": {
+            "parts": [
+              {
+                "text": "```json\n{\n  \"Event name\": \"Make up sessions for December clinic\",\n  \"Participants\": [\n    \"Girls\",\n    \"Boys\"\n  ],\n  \"Location\": \"Scout field\",\n  \"Dates and Time\": \"26th at 12:15-1:15pm, 31st at 3:45-4:45pm, 02-02-2025 at 10:00-11:00am\",\n  \"Repeat frequency\": null,\n  \"End date\": null\n}\n```\n"
+              }
+            ],
+            "role": "model"
+          },
+          "finish_reason": "STOP",
+          "avg_logprobs": -0.013033272615119593
+        }
+      ],
+      "usage_metadata": {
+        "prompt_token_count": 646,
+        "candidates_token_count": 134,
+        "total_token_count": 780
+      }
+    }),
+)
+2025-01-20 15:07:58,534 - __main__ - INFO - Extracted JSON string: {
+  "Event name": "Make up sessions for December clinic",
+  "Participants": [
+    "Girls",
+    "Boys"
+  ],
+  "Location": "Scout field",
+  "Dates and Time": "26th at 12:15-1:15pm, 31st at 3:45-4:45pm, 02-02-2025 at 10:00-11:00am",
+  "Repeat frequency": null,
+  "End date": null
+}
+2025-01-20 15:07:58,535 - __main__ - INFO - Successfully extracted event info: {
+  "Event name": "Make up sessions for December clinic",
+  "Participants": [
+    "Girls",
+    "Boys"
+  ],
+  "Location": "Scout field",
+  "Dates and Time": "26th at 12:15-1:15pm, 31st at 3:45-4:45pm, 02-02-2025 at 10:00-11:00am",
+  "Repeat frequency": null,
+  "End date": null
+}
+2025-01-20 15:07:58,535 - __main__ - INFO - Saving event to database
+2025-01-20 15:07:58,535 - __main__ - INFO - Checking for duplicate event: None
+2025-01-20 15:07:58,535 - __main__ - INFO - Duplicate check result: No duplicate found
+2025-01-20 15:07:58,536 - __main__ - INFO - Successfully saved event c13d35c1-921c-4ff7-92e7-36fce3d8a5be to database
+2025-01-20 15:07:58,536 - __main__ - INFO - Creating calendar invite for event: None
+2025-01-20 15:07:58,536 - __main__ - ERROR - Invalid date format in event_info: No date/time found in event info
+2025-01-20 15:07:58,536 - __main__ - ERROR - Date string was: None
+2025-01-20 15:07:58,536 - __main__ - WARNING - Using current time as fallback: 2025-01-20 15:07:58.536553
+2025-01-20 15:07:58,536 - __main__ - INFO - Calendar invite created successfully
+2025-01-20 15:07:58,537 - __main__ - INFO - Sending calendar invite to job2006feng@gmail.com
+2025-01-20 15:07:59,278 - __main__ - INFO - Calendar invite sent successfully to job2006feng@gmail.com
+2025-01-20 15:07:59,278 - __main__ - INFO - Logging out from Gmail
+2025-01-20 15:12:09,213 - __main__ - INFO - Initializing EmailEventProcessor
+2025-01-20 15:12:09,214 - __main__ - INFO - Successfully initialized Gemini model
+2025-01-20 15:12:09,214 - __main__ - INFO - Starting email processing
+2025-01-20 15:12:09,214 - __main__ - INFO - Connecting to Gmail...
+2025-01-20 15:12:09,545 - __main__ - INFO - Successfully connected to Gmail
+2025-01-20 15:12:09,592 - __main__ - INFO - Searching for emails with subject 'create event'
+2025-01-20 15:12:09,648 - __main__ - INFO - Found 2 matching emails
+2025-01-20 15:12:09,648 - __main__ - INFO - Processing email b'19'
+2025-01-20 15:12:09,873 - __main__ - INFO - Processing multipart email
+2025-01-20 15:12:09,874 - __main__ - INFO - Email body length: 1360 characters
+2025-01-20 15:12:09,874 - __main__ - INFO - Email body: ---------- Forwarded message ---------
+From: VFS Global <donotreply@vfsglobal.com>
+Date: Thu, Jan 9, 2025 at 10:24 PM
+Subject: Appointment Confirmation
+To: <job2006feng@gmail.com>, <JOB2006FENG@gmail.com>
+
+
+VFS Appointment System
+
+Dear Applicant,
+
+Please note that your appointment for Unique Reference Number *
+USA61653801887 * on * 15-01-2025 * at * 9:30 * at 128E 32nd Street, 3rd
+Floor, New York,New York,United States of America,10016.
+
+Please find enclosed your Appointment Letter. Kindly print it and bring it
+with you on your appointment day so you will be allowed to access the
+center. On your appointment day, you must bring the documents required to
+apply for your visa.
+
+In case of any applicable refunds, you will receive an email notification
+once your refund processing has been initiated. Please check the refunds
+policy on our website for more details.
+
+Thank you for your understanding and cooperation.
+
+Kind regards,VFS Global Team
+
+This is an automatically generated email – please do not reply to it. If
+you have any queries or require further assistance, please reach out to our
+customer support team at the numbers mentioned on our website.
+
+Helpline Number : 13472523055
+
+Email: Info.FranceUSA@vfsglobal.com
+
+Website: www.vfsglobal.com/France/USA
+
+
+
+Partnering Governments. Providing Solutions.
+
+2025-01-20 15:12:09,874 - __main__ - INFO - Processing email from: job2006feng@gmail.com
+2025-01-20 15:12:09,874 - __main__ - INFO - Extracting event information from email
+2025-01-20 15:12:09,874 - __main__ - INFO - Sending prompt to Gemini: Extract the following information from the email content and return it as valid JSON:
+        - Event name
+        - Participants (list)
+        - Location
+        - Dates and Time as formatted string as "2025-01-25 at 9:30am, 2025-01-26 12:15pm" seprated by comma
+        - Duration of the event in minutes
+        - Repeat frequency (if any)
+        - End date (if any)
+        
+        Return only the JSON object with no additional text.
+        
+        Email content:
+        ---------- Forwarded message ---------
+From: VFS Global <donotreply@vfsglobal.com>
+Date: Thu, Jan 9, 2025 at 10:24 PM
+Subject: Appointment Confirmation
+To: <job2006feng@gmail.com>, <JOB2006FENG@gmail.com>
+
+
+VFS Appointment System
+
+Dear Applicant,
+
+Please note that your appointment for Unique Reference Number *
+USA61653801887 * on * 15-01-2025 * at * 9:30 * at 128E 32nd Street, 3rd
+Floor, New York,New York,United States of America,10016.
+
+Please find enclosed your Appointment Letter. Kindly print it and bring it
+with you on your appointment day so you will be allowed to access the
+center. On your appointment day, you must bring the documents required to
+apply for your visa.
+
+In case of any applicable refunds, you will receive an email notification
+once your refund processing has been initiated. Please check the refunds
+policy on our website for more details.
+
+Thank you for your understanding and cooperation.
+
+Kind regards,VFS Global Team
+
+This is an automatically generated email – please do not reply to it. If
+you have any queries or require further assistance, please reach out to our
+customer support team at the numbers mentioned on our website.
+
+Helpline Number : 13472523055
+
+Email: Info.FranceUSA@vfsglobal.com
+
+Website: www.vfsglobal.com/France/USA
+
+
+
+Partnering Governments. Providing Solutions.
+
+        
+2025-01-20 15:12:13,320 - __main__ - INFO - Raw response: response:
+GenerateContentResponse(
+    done=True,
+    iterator=None,
+    result=protos.GenerateContentResponse({
+      "candidates": [
+        {
+          "content": {
+            "parts": [
+              {
+                "text": "```json\n{\n  \"Event name\": \"Visa Appointment\",\n  \"Participants\": [\n    \"job2006feng@gmail.com\",\n    \"JOB2006FENG@gmail.com\"\n  ],\n  \"Location\": \"128E 32nd Street, 3rd Floor, New York, New York, United States of America, 10016\",\n  \"Dates and Time\": \"2025-01-15 at 9:30am\",\n  \"Duration of the event in minutes\": null,\n  \"Repeat frequency\": null,\n  \"End date\": null\n}\n```"
+              }
+            ],
+            "role": "model"
+          },
+          "finish_reason": "STOP",
+          "avg_logprobs": -0.002193961594555829
+        }
+      ],
+      "usage_metadata": {
+        "prompt_token_count": 547,
+        "candidates_token_count": 148,
+        "total_token_count": 695
+      }
+    }),
+)
+2025-01-20 15:12:13,321 - __main__ - INFO - Extracted JSON string: {
+  "Event name": "Visa Appointment",
+  "Participants": [
+    "job2006feng@gmail.com",
+    "JOB2006FENG@gmail.com"
+  ],
+  "Location": "128E 32nd Street, 3rd Floor, New York, New York, United States of America, 10016",
+  "Dates and Time": "2025-01-15 at 9:30am",
+  "Duration of the event in minutes": null,
+  "Repeat frequency": null,
+  "End date": null
+}
+2025-01-20 15:12:13,321 - __main__ - INFO - Successfully extracted event info: {
+  "Event name": "Visa Appointment",
+  "Participants": [
+    "job2006feng@gmail.com",
+    "JOB2006FENG@gmail.com"
+  ],
+  "Location": "128E 32nd Street, 3rd Floor, New York, New York, United States of America, 10016",
+  "Dates and Time": "2025-01-15 at 9:30am",
+  "Duration of the event in minutes": null,
+  "Repeat frequency": null,
+  "End date": null
+}
+2025-01-20 15:12:13,321 - __main__ - INFO - Saving event to database
+2025-01-20 15:12:13,326 - __main__ - INFO - Checking for duplicate event: None
+2025-01-20 15:12:13,326 - __main__ - INFO - Duplicate check result: No duplicate found
+2025-01-20 15:12:13,330 - __main__ - INFO - Successfully saved event ee0f60dd-ef36-4e44-a7b7-84f033f57305 to database
+2025-01-20 15:12:13,330 - __main__ - INFO - Creating calendar invite for event: None
+2025-01-20 15:12:13,330 - __main__ - ERROR - Invalid date format in event_info: No date/time found in event info
+2025-01-20 15:12:13,330 - __main__ - ERROR - Date string was: None
+2025-01-20 15:12:13,331 - __main__ - WARNING - Using current time as fallback: 2025-01-20 15:12:13.331001
+2025-01-20 15:12:13,331 - __main__ - INFO - Calendar invite created successfully
+2025-01-20 15:12:13,332 - __main__ - INFO - Sending calendar invite to job2006feng@gmail.com
+2025-01-20 15:12:14,281 - __main__ - INFO - Calendar invite sent successfully to job2006feng@gmail.com
+2025-01-20 15:12:14,281 - __main__ - INFO - Processing email b'25'
+2025-01-20 15:12:14,331 - __main__ - INFO - Processing multipart email
+2025-01-20 15:12:14,331 - __main__ - INFO - Email body length: 1573 characters
+2025-01-20 15:12:14,331 - __main__ - INFO - Email body: ---------- Forwarded message ---------
+From: Cole Penny <colepenny123@gmail.com>
+Date: Fri, Jan 17, 2025 at 07:56
+Subject: Make up options
+To: Cole Penny <colepenny123@gmail.com>
+
+
+Hi all,
+
+I hope your new year is off to a great start. I am going to offer a few
+make up sessions for our missed December clinic below. You are welcome to
+attend any of these dates.
+
+Please see details below. All sessions will be again at Scout field.
+
+*Sunday January 26th: *
+12.15-1.15pm (Girls)
+1.15-2.15pm (Boys)
+
+*Friday January 31st:*
+3.45-4.45pm (Girls & Boys)
+
+*Sunday February 2nd:*
+10-11am (Girls & Boys)
+
+If you can’t make any of the dates, you’re welcome to attend a session in
+my February program, or in the spring.
+
+I appreciate the times and days may vary but I am trying to be flexible
+with offerings for everyone. *If the weather forces any cancellation to
+these dates, I’ll offer further dates in March, as I have a February
+program already scheduled.*
+
+Please let me know if you’ve any questions about the make ups, or wish to
+register for the February program.
+
+Thank you,
+
+On Sunday, December 22, 2024, Cole Penny <colepenny123@gmail.com> wrote:
+
+> Hi all,
+>
+> Due to the weather today there’ll be no soccer. I will schedule a
+> make-up session for the new year and will confirm details after the
+> holidays.
+>
+> If you can’t attend the make-up you’re welcome to attend any future
+> clinics instead, or we can organize a private lesson.
+>
+> Please let me know if you’ve any questions.
+>
+> Happy holidays to you all!
+>
+
+2025-01-20 15:12:14,331 - __main__ - INFO - Processing email from: job2006feng@gmail.com
+2025-01-20 15:12:14,331 - __main__ - INFO - Extracting event information from email
+2025-01-20 15:12:14,331 - __main__ - INFO - Sending prompt to Gemini: Extract the following information from the email content and return it as valid JSON:
+        - Event name
+        - Participants (list)
+        - Location
+        - Dates and Time as formatted string as "2025-01-25 at 9:30am, 2025-01-26 12:15pm" seprated by comma
+        - Duration of the event in minutes
+        - Repeat frequency (if any)
+        - End date (if any)
+        
+        Return only the JSON object with no additional text.
+        
+        Email content:
+        ---------- Forwarded message ---------
+From: Cole Penny <colepenny123@gmail.com>
+Date: Fri, Jan 17, 2025 at 07:56
+Subject: Make up options
+To: Cole Penny <colepenny123@gmail.com>
+
+
+Hi all,
+
+I hope your new year is off to a great start. I am going to offer a few
+make up sessions for our missed December clinic below. You are welcome to
+attend any of these dates.
+
+Please see details below. All sessions will be again at Scout field.
+
+*Sunday January 26th: *
+12.15-1.15pm (Girls)
+1.15-2.15pm (Boys)
+
+*Friday January 31st:*
+3.45-4.45pm (Girls & Boys)
+
+*Sunday February 2nd:*
+10-11am (Girls & Boys)
+
+If you can’t make any of the dates, you’re welcome to attend a session in
+my February program, or in the spring.
+
+I appreciate the times and days may vary but I am trying to be flexible
+with offerings for everyone. *If the weather forces any cancellation to
+these dates, I’ll offer further dates in March, as I have a February
+program already scheduled.*
+
+Please let me know if you’ve any questions about the make ups, or wish to
+register for the February program.
+
+Thank you,
+
+On Sunday, December 22, 2024, Cole Penny <colepenny123@gmail.com> wrote:
+
+> Hi all,
+>
+> Due to the weather today there’ll be no soccer. I will schedule a
+> make-up session for the new year and will confirm details after the
+> holidays.
+>
+> If you can’t attend the make-up you’re welcome to attend any future
+> clinics instead, or we can organize a private lesson.
+>
+> Please let me know if you’ve any questions.
+>
+> Happy holidays to you all!
+>
+
+        
+2025-01-20 15:12:17,675 - __main__ - INFO - Raw response: response:
+GenerateContentResponse(
+    done=True,
+    iterator=None,
+    result=protos.GenerateContentResponse({
+      "candidates": [
+        {
+          "content": {
+            "parts": [
+              {
+                "text": "```json\n{\n  \"Event name\": \"Make up sessions for missed December clinic\",\n  \"Participants\": [\n    \"Girls\",\n    \"Boys\"\n  ],\n  \"Location\": \"Scout field\",\n  \"Dates and Time\": \"2025-01-26 at 12:15pm, 2025-01-31 at 3:45pm, 2025-02-02 at 10:00am\",\n  \"Duration of the event in minutes\": 60,\n  \"Repeat frequency\": null,\n  \"End date\": null\n}\n```"
+              }
+            ],
+            "role": "model"
+          },
+          "finish_reason": "STOP",
+          "avg_logprobs": -0.004766436472331008
+        }
+      ],
+      "usage_metadata": {
+        "prompt_token_count": 640,
+        "candidates_token_count": 146,
+        "total_token_count": 786
+      }
+    }),
+)
+2025-01-20 15:12:17,675 - __main__ - INFO - Extracted JSON string: {
+  "Event name": "Make up sessions for missed December clinic",
+  "Participants": [
+    "Girls",
+    "Boys"
+  ],
+  "Location": "Scout field",
+  "Dates and Time": "2025-01-26 at 12:15pm, 2025-01-31 at 3:45pm, 2025-02-02 at 10:00am",
+  "Duration of the event in minutes": 60,
+  "Repeat frequency": null,
+  "End date": null
+}
+2025-01-20 15:12:17,676 - __main__ - INFO - Successfully extracted event info: {
+  "Event name": "Make up sessions for missed December clinic",
+  "Participants": [
+    "Girls",
+    "Boys"
+  ],
+  "Location": "Scout field",
+  "Dates and Time": "2025-01-26 at 12:15pm, 2025-01-31 at 3:45pm, 2025-02-02 at 10:00am",
+  "Duration of the event in minutes": 60,
+  "Repeat frequency": null,
+  "End date": null
+}
+2025-01-20 15:12:17,676 - __main__ - INFO - Saving event to database
+2025-01-20 15:12:17,677 - __main__ - INFO - Checking for duplicate event: None
+2025-01-20 15:12:17,677 - __main__ - INFO - Duplicate check result: No duplicate found
+2025-01-20 15:12:17,679 - __main__ - INFO - Successfully saved event ab5abf88-88dd-4021-8399-7dbde30c5502 to database
+2025-01-20 15:12:17,679 - __main__ - INFO - Creating calendar invite for event: None
+2025-01-20 15:12:17,679 - __main__ - ERROR - Invalid date format in event_info: No date/time found in event info
+2025-01-20 15:12:17,679 - __main__ - ERROR - Date string was: None
+2025-01-20 15:12:17,679 - __main__ - WARNING - Using current time as fallback: 2025-01-20 15:12:17.679740
+2025-01-20 15:12:17,679 - __main__ - INFO - Calendar invite created successfully
+2025-01-20 15:12:17,680 - __main__ - INFO - Sending calendar invite to job2006feng@gmail.com
+2025-01-20 15:12:18,579 - __main__ - INFO - Calendar invite sent successfully to job2006feng@gmail.com
+2025-01-20 15:12:18,580 - __main__ - INFO - Logging out from Gmail
+2025-01-20 15:14:52,385 - __main__ - INFO - Initializing EmailEventProcessor
+2025-01-20 15:14:52,386 - __main__ - INFO - Successfully initialized Gemini model
+2025-01-20 15:14:52,386 - __main__ - INFO - Starting email processing
+2025-01-20 15:14:52,386 - __main__ - INFO - Connecting to Gmail...
+2025-01-20 15:14:52,687 - __main__ - INFO - Successfully connected to Gmail
+2025-01-20 15:14:52,738 - __main__ - INFO - Searching for emails with subject 'create event'
+2025-01-20 15:14:52,795 - __main__ - INFO - Found 2 matching emails
+2025-01-20 15:14:52,795 - __main__ - INFO - Processing email b'19'
+2025-01-20 15:14:53,021 - __main__ - INFO - Processing multipart email
+2025-01-20 15:14:53,021 - __main__ - INFO - Email body length: 1360 characters
+2025-01-20 15:14:53,021 - __main__ - INFO - Email body: ---------- Forwarded message ---------
+From: VFS Global <donotreply@vfsglobal.com>
+Date: Thu, Jan 9, 2025 at 10:24 PM
+Subject: Appointment Confirmation
+To: <job2006feng@gmail.com>, <JOB2006FENG@gmail.com>
+
+
+VFS Appointment System
+
+Dear Applicant,
+
+Please note that your appointment for Unique Reference Number *
+USA61653801887 * on * 15-01-2025 * at * 9:30 * at 128E 32nd Street, 3rd
+Floor, New York,New York,United States of America,10016.
+
+Please find enclosed your Appointment Letter. Kindly print it and bring it
+with you on your appointment day so you will be allowed to access the
+center. On your appointment day, you must bring the documents required to
+apply for your visa.
+
+In case of any applicable refunds, you will receive an email notification
+once your refund processing has been initiated. Please check the refunds
+policy on our website for more details.
+
+Thank you for your understanding and cooperation.
+
+Kind regards,VFS Global Team
+
+This is an automatically generated email – please do not reply to it. If
+you have any queries or require further assistance, please reach out to our
+customer support team at the numbers mentioned on our website.
+
+Helpline Number : 13472523055
+
+Email: Info.FranceUSA@vfsglobal.com
+
+Website: www.vfsglobal.com/France/USA
+
+
+
+Partnering Governments. Providing Solutions.
+
+2025-01-20 15:14:53,021 - __main__ - INFO - Processing email from: job2006feng@gmail.com
+2025-01-20 15:14:53,021 - __main__ - INFO - Extracting event information from email
+2025-01-20 15:14:53,021 - __main__ - INFO - Sending prompt to Gemini: Extract the following information from the email content and return it as valid JSON:
+        - Event name: string
+        - Participants: array of email addresses
+        - Location: string
+        - Dates and Time: array of objects with this format:
+            [{"date_time": "YYYY-MM-DD HH:mm", "duration_minutes": number}]
+            For example:
+            [
+                {"date_time": "2025-01-25 09:30", "duration_minutes": 60},
+                {"date_time": "2025-01-26 12:15", "duration_minutes": 45}
+            ]
+        - Repeat frequency (if any): string or null
+        - End date (if any): "YYYY-MM-DD" or null
+
+        Parse all dates into standard format YYYY-MM-DD HH:mm.
+        Convert all times to 24-hour format.
+        Return only the JSON object with no additional text.
+        
+        Example output:
+        {
+            "event_name": "Team Meeting",
+            "participants": ["john@example.com", "mary@example.com"],
+            "location": "Conference Room A",
+            "dates_and_time": [
+                {"date_time": "2025-01-25 14:30", "duration_minutes": 60}
+            ],
+            "repeat_frequency": "weekly",
+            "end_date": "2025-02-25"
+        }
+
+        Email content:
+        ---------- Forwarded message ---------
+From: VFS Global <donotreply@vfsglobal.com>
+Date: Thu, Jan 9, 2025 at 10:24 PM
+Subject: Appointment Confirmation
+To: <job2006feng@gmail.com>, <JOB2006FENG@gmail.com>
+
+
+VFS Appointment System
+
+Dear Applicant,
+
+Please note that your appointment for Unique Reference Number *
+USA61653801887 * on * 15-01-2025 * at * 9:30 * at 128E 32nd Street, 3rd
+Floor, New York,New York,United States of America,10016.
+
+Please find enclosed your Appointment Letter. Kindly print it and bring it
+with you on your appointment day so you will be allowed to access the
+center. On your appointment day, you must bring the documents required to
+apply for your visa.
+
+In case of any applicable refunds, you will receive an email notification
+once your refund processing has been initiated. Please check the refunds
+policy on our website for more details.
+
+Thank you for your understanding and cooperation.
+
+Kind regards,VFS Global Team
+
+This is an automatically generated email – please do not reply to it. If
+you have any queries or require further assistance, please reach out to our
+customer support team at the numbers mentioned on our website.
+
+Helpline Number : 13472523055
+
+Email: Info.FranceUSA@vfsglobal.com
+
+Website: www.vfsglobal.com/France/USA
+
+
+
+Partnering Governments. Providing Solutions.
+
+        
+2025-01-20 15:14:56,870 - __main__ - INFO - Raw response: response:
+GenerateContentResponse(
+    done=True,
+    iterator=None,
+    result=protos.GenerateContentResponse({
+      "candidates": [
+        {
+          "content": {
+            "parts": [
+              {
+                "text": "```json\n{\n  \"event_name\": \"Visa Appointment\",\n  \"participants\": [\n    \"job2006feng@gmail.com\",\n    \"JOB2006FENG@gmail.com\"\n  ],\n  \"location\": \"128E 32nd Street, 3rd Floor, New York,New York,United States of America,10016\",\n  \"dates_and_time\": [\n    {\n      \"date_time\": \"2025-01-15 09:30\",\n      \"duration_minutes\": null\n    }\n  ],\n  \"repeat_frequency\": null,\n  \"end_date\": null\n}\n```\n"
+              }
+            ],
+            "role": "model"
+          },
+          "finish_reason": "STOP",
+          "avg_logprobs": -0.0008116811513900757
+        }
+      ],
+      "usage_metadata": {
+        "prompt_token_count": 776,
+        "candidates_token_count": 165,
+        "total_token_count": 941
+      }
+    }),
+)
+2025-01-20 15:14:56,871 - __main__ - INFO - Extracted JSON string: {
+  "event_name": "Visa Appointment",
+  "participants": [
+    "job2006feng@gmail.com",
+    "JOB2006FENG@gmail.com"
+  ],
+  "location": "128E 32nd Street, 3rd Floor, New York,New York,United States of America,10016",
+  "dates_and_time": [
+    {
+      "date_time": "2025-01-15 09:30",
+      "duration_minutes": null
+    }
+  ],
+  "repeat_frequency": null,
+  "end_date": null
+}
+2025-01-20 15:14:56,871 - __main__ - INFO - Successfully extracted event info: {
+  "event_name": "Visa Appointment",
+  "participants": [
+    "job2006feng@gmail.com",
+    "JOB2006FENG@gmail.com"
+  ],
+  "location": "128E 32nd Street, 3rd Floor, New York,New York,United States of America,10016",
+  "dates_and_time": [
+    {
+      "date_time": "2025-01-15 09:30",
+      "duration_minutes": null
+    }
+  ],
+  "repeat_frequency": null,
+  "end_date": null
+}
+2025-01-20 15:14:56,872 - __main__ - INFO - Saving event to database
+2025-01-20 15:14:56,876 - __main__ - INFO - Checking for duplicate event: Visa Appointment
+2025-01-20 15:14:56,876 - __main__ - INFO - Duplicate check result: No duplicate found
+2025-01-20 15:14:56,879 - __main__ - INFO - Successfully saved event 116f0966-25d3-4191-9285-951151ecaa2a to database
+2025-01-20 15:14:56,880 - __main__ - INFO - Creating calendar invite for event: Visa Appointment
+2025-01-20 15:14:56,883 - __main__ - ERROR - Error parsing date_time: int() argument must be a string, a bytes-like object or a real number, not 'NoneType'
+2025-01-20 15:14:56,884 - __main__ - INFO - Calendar invite(s) created successfully
+2025-01-20 15:14:56,885 - __main__ - INFO - Sending calendar invite to job2006feng@gmail.com
+2025-01-20 15:14:57,713 - __main__ - INFO - Calendar invite sent successfully to job2006feng@gmail.com
+2025-01-20 15:14:57,713 - __main__ - INFO - Processing email b'25'
+2025-01-20 15:14:57,762 - __main__ - INFO - Processing multipart email
+2025-01-20 15:14:57,763 - __main__ - INFO - Email body length: 1573 characters
+2025-01-20 15:14:57,763 - __main__ - INFO - Email body: ---------- Forwarded message ---------
+From: Cole Penny <colepenny123@gmail.com>
+Date: Fri, Jan 17, 2025 at 07:56
+Subject: Make up options
+To: Cole Penny <colepenny123@gmail.com>
+
+
+Hi all,
+
+I hope your new year is off to a great start. I am going to offer a few
+make up sessions for our missed December clinic below. You are welcome to
+attend any of these dates.
+
+Please see details below. All sessions will be again at Scout field.
+
+*Sunday January 26th: *
+12.15-1.15pm (Girls)
+1.15-2.15pm (Boys)
+
+*Friday January 31st:*
+3.45-4.45pm (Girls & Boys)
+
+*Sunday February 2nd:*
+10-11am (Girls & Boys)
+
+If you can’t make any of the dates, you’re welcome to attend a session in
+my February program, or in the spring.
+
+I appreciate the times and days may vary but I am trying to be flexible
+with offerings for everyone. *If the weather forces any cancellation to
+these dates, I’ll offer further dates in March, as I have a February
+program already scheduled.*
+
+Please let me know if you’ve any questions about the make ups, or wish to
+register for the February program.
+
+Thank you,
+
+On Sunday, December 22, 2024, Cole Penny <colepenny123@gmail.com> wrote:
+
+> Hi all,
+>
+> Due to the weather today there’ll be no soccer. I will schedule a
+> make-up session for the new year and will confirm details after the
+> holidays.
+>
+> If you can’t attend the make-up you’re welcome to attend any future
+> clinics instead, or we can organize a private lesson.
+>
+> Please let me know if you’ve any questions.
+>
+> Happy holidays to you all!
+>
+
+2025-01-20 15:14:57,763 - __main__ - INFO - Processing email from: job2006feng@gmail.com
+2025-01-20 15:14:57,763 - __main__ - INFO - Extracting event information from email
+2025-01-20 15:14:57,763 - __main__ - INFO - Sending prompt to Gemini: Extract the following information from the email content and return it as valid JSON:
+        - Event name: string
+        - Participants: array of email addresses
+        - Location: string
+        - Dates and Time: array of objects with this format:
+            [{"date_time": "YYYY-MM-DD HH:mm", "duration_minutes": number}]
+            For example:
+            [
+                {"date_time": "2025-01-25 09:30", "duration_minutes": 60},
+                {"date_time": "2025-01-26 12:15", "duration_minutes": 45}
+            ]
+        - Repeat frequency (if any): string or null
+        - End date (if any): "YYYY-MM-DD" or null
+
+        Parse all dates into standard format YYYY-MM-DD HH:mm.
+        Convert all times to 24-hour format.
+        Return only the JSON object with no additional text.
+        
+        Example output:
+        {
+            "event_name": "Team Meeting",
+            "participants": ["john@example.com", "mary@example.com"],
+            "location": "Conference Room A",
+            "dates_and_time": [
+                {"date_time": "2025-01-25 14:30", "duration_minutes": 60}
+            ],
+            "repeat_frequency": "weekly",
+            "end_date": "2025-02-25"
+        }
+
+        Email content:
+        ---------- Forwarded message ---------
+From: Cole Penny <colepenny123@gmail.com>
+Date: Fri, Jan 17, 2025 at 07:56
+Subject: Make up options
+To: Cole Penny <colepenny123@gmail.com>
+
+
+Hi all,
+
+I hope your new year is off to a great start. I am going to offer a few
+make up sessions for our missed December clinic below. You are welcome to
+attend any of these dates.
+
+Please see details below. All sessions will be again at Scout field.
+
+*Sunday January 26th: *
+12.15-1.15pm (Girls)
+1.15-2.15pm (Boys)
+
+*Friday January 31st:*
+3.45-4.45pm (Girls & Boys)
+
+*Sunday February 2nd:*
+10-11am (Girls & Boys)
+
+If you can’t make any of the dates, you’re welcome to attend a session in
+my February program, or in the spring.
+
+I appreciate the times and days may vary but I am trying to be flexible
+with offerings for everyone. *If the weather forces any cancellation to
+these dates, I’ll offer further dates in March, as I have a February
+program already scheduled.*
+
+Please let me know if you’ve any questions about the make ups, or wish to
+register for the February program.
+
+Thank you,
+
+On Sunday, December 22, 2024, Cole Penny <colepenny123@gmail.com> wrote:
+
+> Hi all,
+>
+> Due to the weather today there’ll be no soccer. I will schedule a
+> make-up session for the new year and will confirm details after the
+> holidays.
+>
+> If you can’t attend the make-up you’re welcome to attend any future
+> clinics instead, or we can organize a private lesson.
+>
+> Please let me know if you’ve any questions.
+>
+> Happy holidays to you all!
+>
+
+        
+2025-01-20 15:15:03,014 - __main__ - INFO - Raw response: response:
+GenerateContentResponse(
+    done=True,
+    iterator=None,
+    result=protos.GenerateContentResponse({
+      "candidates": [
+        {
+          "content": {
+            "parts": [
+              {
+                "text": "```json\n{\n  \"event_name\": \"Soccer Clinic Make-Up Sessions\",\n  \"participants\": [],\n  \"location\": \"Scout field\",\n  \"dates_and_time\": [\n    {\n      \"date_time\": \"2025-01-26 12:15\",\n      \"duration_minutes\": 60\n    },\n    {\n      \"date_time\": \"2025-01-26 13:15\",\n      \"duration_minutes\": 60\n    },\n    {\n      \"date_time\": \"2025-01-31 15:45\",\n      \"duration_minutes\": 60\n    },\n    {\n      \"date_time\": \"2025-02-02 10:00\",\n      \"duration_minutes\": 60\n    }\n  ],\n  \"repeat_frequency\": null,\n  \"end_date\": null\n}\n```"
+              }
+            ],
+            "role": "model"
+          },
+          "finish_reason": "STOP",
+          "avg_logprobs": -0.0007186704154672293
+        }
+      ],
+      "usage_metadata": {
+        "prompt_token_count": 869,
+        "candidates_token_count": 232,
+        "total_token_count": 1101
+      }
+    }),
+)
+2025-01-20 15:15:03,016 - __main__ - INFO - Extracted JSON string: {
+  "event_name": "Soccer Clinic Make-Up Sessions",
+  "participants": [],
+  "location": "Scout field",
+  "dates_and_time": [
+    {
+      "date_time": "2025-01-26 12:15",
+      "duration_minutes": 60
+    },
+    {
+      "date_time": "2025-01-26 13:15",
+      "duration_minutes": 60
+    },
+    {
+      "date_time": "2025-01-31 15:45",
+      "duration_minutes": 60
+    },
+    {
+      "date_time": "2025-02-02 10:00",
+      "duration_minutes": 60
+    }
+  ],
+  "repeat_frequency": null,
+  "end_date": null
+}
+2025-01-20 15:15:03,016 - __main__ - INFO - Successfully extracted event info: {
+  "event_name": "Soccer Clinic Make-Up Sessions",
+  "participants": [],
+  "location": "Scout field",
+  "dates_and_time": [
+    {
+      "date_time": "2025-01-26 12:15",
+      "duration_minutes": 60
+    },
+    {
+      "date_time": "2025-01-26 13:15",
+      "duration_minutes": 60
+    },
+    {
+      "date_time": "2025-01-31 15:45",
+      "duration_minutes": 60
+    },
+    {
+      "date_time": "2025-02-02 10:00",
+      "duration_minutes": 60
+    }
+  ],
+  "repeat_frequency": null,
+  "end_date": null
+}
+2025-01-20 15:15:03,016 - __main__ - INFO - Saving event to database
+2025-01-20 15:15:03,017 - __main__ - INFO - Checking for duplicate event: Soccer Clinic Make-Up Sessions
+2025-01-20 15:15:03,018 - __main__ - INFO - Duplicate check result: No duplicate found
+2025-01-20 15:15:03,020 - __main__ - INFO - Successfully saved event 015fc4d1-62ca-4f04-b2f6-46a5c0e7def4 to database
+2025-01-20 15:15:03,020 - __main__ - INFO - Creating calendar invite for event: Soccer Clinic Make-Up Sessions
+2025-01-20 15:15:03,061 - __main__ - INFO - Calendar invite(s) created successfully
+2025-01-20 15:15:03,061 - __main__ - INFO - Sending calendar invite to job2006feng@gmail.com
+2025-01-20 15:15:03,954 - __main__ - INFO - Calendar invite sent successfully to job2006feng@gmail.com
+2025-01-20 15:15:03,955 - __main__ - INFO - Logging out from Gmail

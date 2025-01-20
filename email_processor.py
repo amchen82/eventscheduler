@@ -2,7 +2,7 @@ import imaplib
 import email
 from email.header import decode_header
 import os
-from datetime import datetime
+from datetime import datetime, timedelta
 import uuid
 import google.generativeai as genai
 import sqlite3
@@ -16,6 +16,7 @@ from email import encoders
 from icalendar import Calendar, Event as CalendarEvent
 import smtplib
 import pytz
+import dateutil.parser
 
 class EmailEventProcessor:
     def __init__(self):
@@ -30,7 +31,7 @@ class EmailEventProcessor:
         
         # Initialize Gemini
         try:
-            genai.configure(api_key=self.config.get_secret('GEMINI_API_KEY'))
+            genai.configure(api_key="AIzaSyCtPO6UqJPlJ-6BKT51A77WziDHgntVUTo") #self.config.get_secret('GEMINI_API_KEY'))
             self.model = genai.GenerativeModel("gemini-1.5-pro-latest") 
             self.logger.info("Successfully initialized Gemini model")
         except Exception as e:
@@ -63,15 +64,35 @@ class EmailEventProcessor:
     def extract_event_info(self, email_body):
         self.logger.info("Extracting event information from email")
         prompt = f"""Extract the following information from the email content and return it as valid JSON:
-        - Event name
-        - Participants (list)
-        - Location
-        - Dates and Time
-        - Repeat frequency (if any)
-        - End date (if any)
-        
+        - Event name: string
+        - Participants: array of email addresses
+        - Location: string
+        - Dates and Time: array of objects with this format:
+            [{{"date_time": "YYYY-MM-DD HH:mm", "duration_minutes": number}}]
+            For example:
+            [
+                {{"date_time": "2025-01-25 09:30", "duration_minutes": 60}},
+                {{"date_time": "2025-01-26 12:15", "duration_minutes": 45}}
+            ]
+        - Repeat frequency (if any): string or null
+        - End date (if any): "YYYY-MM-DD" or null
+
+        Parse all dates into standard format YYYY-MM-DD HH:mm.
+        Convert all times to 24-hour format.
         Return only the JSON object with no additional text.
         
+        Example output:
+        {{
+            "event_name": "Team Meeting",
+            "participants": ["john@example.com", "mary@example.com"],
+            "location": "Conference Room A",
+            "dates_and_time": [
+                {{"date_time": "2025-01-25 14:30", "duration_minutes": 60}}
+            ],
+            "repeat_frequency": "weekly",
+            "end_date": "2025-02-25"
+        }}
+
         Email content:
         {email_body}
         """
@@ -104,6 +125,30 @@ class EmailEventProcessor:
                 "raw_response": response.text if 'response' in locals() else None
             }
 
+    def is_duplicate_event(self, event_info, conn):
+        """Check if an event with same name and time already exists"""
+        self.logger.info(f"Checking for duplicate event: {event_info.get('event_name')}")
+        cursor = conn.cursor()
+        
+        try:
+            cursor.execute('''
+            SELECT COUNT(*) FROM events 
+            WHERE event_name = ? 
+            AND event_data LIKE ?
+            ''', (
+                event_info.get('event_name'),
+                f"%{event_info.get('date_time', '')}%"
+            ))
+            
+            count = cursor.fetchone()[0]
+            is_duplicate = count > 0
+            self.logger.info(f"Duplicate check result: {'Found duplicate' if is_duplicate else 'No duplicate found'}")
+            return is_duplicate
+            
+        except Exception as e:
+            self.logger.error(f"Error checking for duplicates: {str(e)}")
+            return False
+
     def save_to_database(self, email_address, event_info):
         self.logger.info("Saving event to database")
         conn = sqlite3.connect('events.db')
@@ -120,9 +165,14 @@ class EmailEventProcessor:
              event_data TEXT)
             ''')
 
+            # Check for duplicates before saving
+            if self.is_duplicate_event(event_info, conn):
+                self.logger.warning(f"Skipping duplicate event: {event_info.get('event_name')}")
+                return False
+
             unique_id = str(uuid.uuid4())
             timestamp = datetime.now()
-            self.logger.info(f"SQL executed: {cursor.execute('''INSERT INTO events (unique_id, email_address, event_name, timestamp, event_data) VALUES (?, ?, ?, ?, ?)''', (unique_id, email_address, event_info.get('event_name'), timestamp, str(event_info)))}")
+
             cursor.execute('''
             INSERT INTO events (unique_id, email_address, event_name, timestamp, event_data)
             VALUES (?, ?, ?, ?, ?)
@@ -130,6 +180,8 @@ class EmailEventProcessor:
 
             conn.commit()
             self.logger.info(f"Successfully saved event {unique_id} to database")
+            return True
+            
         except Exception as e:
             self.logger.error(f"Database error: {str(e)}")
             raise
@@ -146,37 +198,55 @@ class EmailEventProcessor:
             cal.add('prodid', '-//InfinityKnowledge Calendar//infinityknowledge42@gmail.com//')
             cal.add('version', '2.0')
             
-            event = CalendarEvent()
-            event.add('summary', event_info.get('event_name', 'Untitled Event'))
+            dates_and_time = event_info.get('dates_and_time', [])
+            if not isinstance(dates_and_time, list):
+                dates_and_time = [dates_and_time]
             
-            # Parse date and time
-            try:
-                start_time = datetime.fromisoformat(event_info.get('date_time', ''))
-            except (ValueError, TypeError):
-                self.logger.error("Invalid date format in event_info")
-                start_time = datetime.now()
+            for date_time_info in dates_and_time:
+                event = CalendarEvent()
+                event.add('summary', event_info.get('event_name', 'Untitled Event'))
+                
+                try:
+                    # Parse the date_time string
+                    start_time = datetime.strptime(date_time_info['date_time'], '%Y-%m-%d %H:%M')
+                    duration = int(date_time_info.get('duration_minutes', 60))  # default 60 minutes
+                    
+                    # Convert to UTC
+                    start_time = pytz.timezone('America/New_York').localize(start_time).astimezone(pytz.UTC)
+                    end_time = start_time + timedelta(minutes=duration)
+                    
+                    event.add('dtstart', start_time)
+                    event.add('dtend', end_time)
+                    
+                except (ValueError, TypeError) as e:
+                    self.logger.error(f"Error parsing date_time: {str(e)}")
+                    continue
+                
+                # Add location if available
+                if event_info.get('location'):
+                    event.add('location', event_info['location'])
+                
+                # Add description with all event details
+                description = f"""Event created via email processing system
+Location: {event_info.get('location', 'Not specified')}
+Duration: {duration} minutes
+Repeat: {event_info.get('repeat_frequency', 'None')}
+End Date: {event_info.get('end_date', 'Not specified')}
+"""
+                event.add('description', description)
+                
+                # Add attendees
+                for attendee in event_info.get('participants', []):
+                    if '@' in attendee:  # Only add if it's an email address
+                        event.add('attendee', f'mailto:{attendee}')
+                
+                # Add organizer
+                event.add('organizer', f'mailto:{self.email_address}')
+                
+                # Add the event to the calendar
+                cal.add_component(event)
             
-            event.add('dtstart', start_time)
-            event.add('dtend', start_time + timedelta(hours=1))  # Default 1 hour duration
-            
-            # Add location if available
-            if event_info.get('location'):
-                event.add('location', event_info['location'])
-            
-            # Add description
-            event.add('description', f"Event created via email processing system")
-            
-            # Add attendees
-            for attendee in event_info.get('participants', []):
-                event.add('attendee', f'mailto:{attendee}')
-            
-            # Add organizer
-            event.add('organizer', f'mailto:{self.email_address}')
-            
-            # Add the event to the calendar
-            cal.add_component(event)
-            
-            self.logger.info("Calendar invite created successfully")
+            self.logger.info("Calendar invite(s) created successfully")
             return cal.to_ical()
             
         except Exception as e:
@@ -265,15 +335,16 @@ class EmailEventProcessor:
                 # Extract event information using LLM
                 event_info = self.extract_event_info(email_body)
                 
-                # Save to database
-                self.save_to_database(self.email_address, event_info)
-                
-                # Create and send calendar invite
-                try:
-                    ics_data = self.create_calendar_invite(event_info)
-                    self.send_calendar_invite(sender_email, event_info, ics_data)
-                except Exception as e:
-                    self.logger.error(f"Failed to send calendar invite: {str(e)}")
+                # Save to database and only send invite if it's not a duplicate
+                if self.save_to_database(self.email_address, event_info):
+                    # Create and send calendar invite
+                    try:
+                        ics_data = self.create_calendar_invite(event_info)
+                        self.send_calendar_invite(sender_email, event_info, ics_data)
+                    except Exception as e:
+                        self.logger.error(f"Failed to send calendar invite: {str(e)}")
+                else:
+                    self.logger.info("Skipping calendar invite for duplicate event")
 
         except Exception as e:
             self.logger.error(f"Error processing emails: {str(e)}")

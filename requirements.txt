@@ -2,4 +2,5 @@ google-generativeai
 python-dotenv
 cryptography
 icalendar
-pytz 
+pytz
+python-dateutil 
